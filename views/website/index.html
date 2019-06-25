@@ -1,0 +1,160 @@
+<html>
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+
+  <% include ./common/head.html %>
+  <!--banner-->
+  <div class="wholebody" >
+      <!-- 图片轮转 1200*500 -->
+      <div class="slider">
+          <div class="slider-img">
+              <ul class="slider-img-ul">
+                  <li><img src="/images/banner11.jpg"></li>
+                  <li><img src="/images/banner22.jpg"></li>
+                  <li><img src="/images/banner33.jpg"></li>
+                  <li><img src="/images/banner44.jpg"></li>
+                  <li><img src="/images/banner55.jpg"></li>
+                  <li><img src="/images/banner66.jpg"></li>
+              </ul>
+          </div>
+          <a href="javascript:" class="slider-btn slider-btn-left" title="">&lt;</a>
+          <a href="javascript:" class="slider-btn slider-btn-right" title="">&gt;</a>
+          <div class="slider-dot">
+              <ul>
+                  <li class="active"></li>
+                  <li class=""></li>
+                  <li class=""></li>
+                  <li class=""></li>
+                  <li class=""></li>
+                  <li class=""></li>
+              </ul>
+          </div>
+      </div>
+      <!-- 公告栏  -->
+      <!-- 新闻框 -->
+      <div class="news-all">
+          <div class="news-title">
+              <div class="dongtai"  id="dong"  onclick="turn()">最新动态 </div>
+              <div class="xiangmu" id="xiang" onclick="turn1()">项&nbsp;&nbsp;&nbsp;&nbsp;目 </div>
+              <div class="dongtai-show"  id="ds">
+                  <div class="left-s1">
+                      <div class="pic-ls"><img alt="图1" src="/images/pic-1.jpg"></div>
+                      <a href="###">青年演员李易峰担任“春蕾计划”爱心传播大使</a>
+                  </div>
+                  <div class="right-s1">
+                      <div class="pic-rs"><img alt="图2" src="/images/pic-2.jpg"></div>
+                      <a href="###">武警部队第五次向春蕾计划捐款仪式在京举行</a>
+                      <p>9月27日，在国庆67周年前夕，武警部队第五次向“春蕾计划”捐款仪式在北京武警部队机关礼堂举行……</p>
+                  </div>
+                  <div class="right-s2">
+                      <div class="pic-rs"><img alt="" src="/images/pic-3.jpg"></div>
+                      <a href="###">2016“春蕾计划”慈善公益盛典在京举办</a>
+                      <p>12月28日，由中国儿童少年基金会、人民网主办，人民网舆情监测室承办……</p>
+                  </div>
+                  <div class="right-s3">
+                      <div class="pic-rs"><img alt="" src="/images/pic-4.jpg"></div>
+                      <a href="###">众星汇聚 为爱歌唱</a>
+                      <p>12月11日，由中国儿童少年基金会和中央人民广播电台MusicRadio音乐之声和共同主办的……</p>
+                  </div>
+                  <div class="more"><a href="/news">MORE&gt;&gt;</a></div>
+              </div>
+              <div class="xiangmu-show" id="xs">
+                  <div align="center">
+                      <table width="100%" border="0" cellpadding="0" cellspacing="1">
+                          <tr>
+                              <td width="" height="" align="left"><h3>项目：hello小孩</h3></td>
+                          </tr>
+                          <tr>
+                              <td width="10%" height="" align="left"><img style="height:100px; weight:80%;" src="/images/pic-4.jpg"></td>
+                              <td width="70%" height="" align="left">
+                                  项目简介 | 帮助贫困地区和处在困境中的孩子的公益项目xgfb<br>
+                                  项目时间 | 2017-3-21至2019-3-21<br>
+                                  项目状态 | 发起中 %>
+                              </td>
+                          </tr>
+                      </table>
+                      </p>
+                  </div>
+                  <div class="more"><a href="/project">MORE&gt;&gt;</a></div>
+              </div>
+              <div class="shipin-show" id="ss"></div>
+          </div>
+      </div>
+      <div class="message">
+          <div class="message-head">
+              <img class="s-biaoqian" alt="标签" src="/images/biaoqian2.png">
+          </div>
+          <div class="message-body">
+              <div class="news">
+                  <div class="news_title">
+                      <!--    <span class="span1">网站新闻列表</span> -->
+                      <span class="span2">
+                          <a href="#" target="_blank" title="更多">
+                              <img src="/images/w_25_02.gif" width="50" height="37">
+                          </a>
+                      </span>
+                  </div>
+                  <div class="news_content">
+                      <p class="p01"><a title="地方" href="#" target="_blank">地方</a></p>
+                      <p class="p01 p03"><a title="" href="#" target="_blank">“大学生志愿者环保科普行”启动仪式举行</a></p>
+                      <p class="p01"><a title="武汉：社区如同细胞演绎大美生活" href="#" target="_blank">武汉：社区如同细胞演绎大美生活</a></p>
+                      <p class="p01 p03"><a title="" href="#" target="_blank">“慈善+”2017跨界公益论坛在北京举行</a></p>
+                      <p class="p01"><a title="" href="#" target="_blank">中国大学校友捐款排行：清华以25.29亿居首</a></p>
+                  </div>
+              </div>
+
+          </div>
+          <!-- <div class="more"><a>MORE&gt;&gt;</a></div> -->
+      </div>
+      <!-- 友情链接 -->
+      <div class="link">
+          <div class="link-head">
+              <img class="s-biaoqian" alt="标签" src="/images/biaoqian1.png"></div>
+          <div class="link-body">
+              <div class="xglink"><a href="http://www.zgzyz.org.cn/" target="_blank"><img alt="中国青年志愿者" src="/images/link1.jpg"></a></div>
+              <div class="xglink"><a href="http://srschina.org/" target="_blank"><img alt="上海根与芽" src="/images/link2.jpg"></a></div>
+              <div class="xglink"><a href="http://weibo.com/u/1759486811?is_all=1" target="_blank"><img alt="中国大学生公益联盟" src="/images/link3.jpg"></a></div>
+              <div class="xglink"><a href="http://www.yinghuo.org/portal.php" target="_blank"><img alt="萤火助学" src="/images/link4.jpg"></a></div>
+              <div class="xglink"><a href="http://www.redcross.org.cn/hhzh/" target="_blank"><img alt="中国红红十字会" src="/images/link5.jpg"></a></div>
+              <div class="xglink"><a href="http://cva.mca.gov.cn/" target="_blank"><img alt="中华志愿者协会" src="/images/link6.jpg"></a></div>
+
+          </div>
+      </div>
+      <!-- 页尾 -->
+      <div class="yewei">
+          <div class="wei">
+              <div class="pic-wei"><img alt="pic1" src="/images/baozheng.png"></div>
+              <div class="word-wei"><span>诚信保证</span></div>
+          </div>
+          <div class="wei">
+              <div class="pic-wei"><img alt="pic1" src="/images/duo.png"></div>
+              <div class="word-wei"><span>选择众多</span></div>
+          </div>
+          <div class="wei">
+              <div class="pic-wei"><img alt="pic1" src="/images/touming.png"></div>
+              <div class="word-wei"><span>爱心透明</span></div>
+          </div>
+          <div class="wei">
+              <div class="pic-wei"><img alt="pic1" src="/images/zizhu.png"></div>
+              <div class="word-wei"><span>供需自助</span></div>
+          </div>
+      </div>
+  </div>
+
+  <div class="feet-bg">
+      <div class="hengfu-b">
+          <span class="a"><a href="/about">关于我们</a></span> |
+          <span class="b"><a href="/contact">联系我们</a></span> |
+          <span><a href="/contact">留言板</a></span><br>
+          <span>版权所有   童心漂流公益平台开发团队</span>
+      </div>
+  </div>
+<script src="/javascripts/banner.js"></script>
+<script src="/javascripts/index.js"></script>
+</body>
+
+</html>

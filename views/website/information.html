@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>信息公示</title>
+</head>
+<body>
+<% include ./common/head.html %>
+<div class="wholebody">
+    <div class="project-body">
+        <!-- 项目总目录  -->
+        <div class="contents">
+            <div class="title-1">
+                <span>留言板</span>
+            </div>
+            <div class="message-board">
+                <span class="tell1">有话想说，点击<img alt="下方" src="/images/down.png"></span><br><br>
+                <div class="tell2"><a href="contact_us.jsp">告诉我们</a></div>
+            </div>
+        </div>
+        <!-- 捐赠方式  -->
+        <div class="donate-way">
+            <div class="title-2">
+                <span>捐赠方式</span>
+                <div class="goods">
+                    <input type="button" value="捐赠物资" onclick="document.location.href='juanzeng.jsp'">
+                    <img alt="手" src="/images/hand.png">
+                </div>
+            </div>
+        </div>
+        <!-- 联系我们  -->
+        <div class="contact-us">
+            <div class="title-3">
+                <span>联系我们</span>
+            </div>
+            <div class="content-words">
+                <span>地址：湖北省武汉市中南民族大学</span><br>
+                <span>邮政编码：430074</span><br>
+                <span>联系电话：800-820-8820</span><br>
+                <span>邮箱：123345634@163.com</span><br>
+            </div>
+        </div>
+        <!-- 项目展示 -->
+        <div class="show-items">
+            <div class="title-4">
+                <span>信息公示</span>
+            </div>
+            <div class="project1-search">
+                <form action="information.jsp" method="post">
+                    <span class="input-1" style="font-size:16px;">&nbsp;&nbsp;&nbsp;&nbsp;捐助者:&nbsp;&nbsp;&nbsp;<input type="text" name="name"></span>
+                    <span style="font-size:16px;">捐赠日期：&nbsp;<input type="text" id="c1" onclick="J.calendar.get();" style="width:157px;" name="time"></span><br><br>
+                    &nbsp;<span style="font-size:16px;">使用指向:&nbsp;&nbsp;<select name="project">
+					   		<option value="春蕾计划">春蕾计划</option>
+					   		<option value="书香中国">书香中国</option>
+					   		<option value="HELLO小孩">HELLO小孩</option>
+					   		<option value="希望工程">希望工程</option>
+					   		<option value="“拉勾勾儿”项目">“拉勾勾儿”项目</option>
+					   		<option value="慈鸿悦读成长计划项目">慈鸿悦读成长计划项目</option>
+					   		<option value="天使的梦">天使的梦</option>
+					   		<option value="天使之家">天使之家</option>
+					   		<option value="众爱专项基金">众爱专项基金</option>
+					   		<option value="智爱专项基金">智爱专项基金</option>
+					   </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</span>
+                </form></div><br>
+            <div class="chaxun">
+                <input type="submit" value="查询">
+            </div>
+            <div class="window-body">
+                <!-- 信息公示  -->
+                <div class="information">
+                    <form action="" method="post">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <th width="12%">捐助者</th>
+                                <th width="30%">物品名称</th>
+                                <th width="15%">物品数量</th>
+                                <th width="30">使用指向</th>
+                                <th width="15%">捐赠时间</th>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>去旅行</td>
+                                <td>2</td>
+                                <td>希望工程</td>
+                                <td>2017-06-21</td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>万物由来</td>
+                                <td>1</td>
+                                <td>慈弘悦读成长计划</td>
+                                <td>2017-06-21</td>
+                            </tr>
+                            <tr>
+                                <td>201421074033</td>
+                                <td>一粒种子的旅行</td>
+                                <td>2</td>
+                                <td>智爱专项基金</td>
+                                <td>2017-06-17</td>
+                            </tr>
+                            <tr>
+                                <td>201421074033</td>
+                                <td>走进奇妙的几何世界</td>
+                                <td>1</td>
+                                <td>hello小孩</td>
+                                <td>2017-06-16</td>
+                            </tr>
+                            <tr>
+                                <td>201421074033</td>
+                                <td>思虑决定出路</td>
+                                <td>2</td>
+                                <td>书香中国</td>
+                                <td>2017-06-15</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="h">
+                            <input type="button" value="首页" onclick="topPage">
+                            <input type="button" value="上一页" onclick="previousPage()">
+                            <input type="button" value="下一页" onclick="nextPage()">
+                            <input type="button" value="尾页" onclick="bottomPage()">&nbsp;
+                            当前第&nbsp;<font color="red">1</font>&nbsp;页</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/javascripts/index.js"></script>
+<script src="/javascripts/lhgcore.js"></script>
+<script src="/javascripts/lhgcalendar.js"></script>
+</body>
+</html>

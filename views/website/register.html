@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="/stylesheets/register.css">
+</head>
+<body>
+<div class="register-top">
+    <div class="title-logo">
+        <img alt="标题 " src="/images/user registration.png">
+    </div>
+</div>
+<div class="register-bg">
+    <img alt="注册背景" src="/images/smilec.jpg">
+</div>
+<div class="form-bg">
+    <div class="form-word"><span style="color:red;font-size:13px;">用户名由字母、数字、下划线组成</span> </div>
+    <form action="/register" method="post">
+    <table class="forma" >
+        <tbody>
+            <tr><td style="text-align:left">用&nbsp;&nbsp;户&nbsp;&nbsp;名</td>
+                <td><input type="text" name="username"><span>*<strong>(带*为必填项)</strong></span></td>
+            </tr>
+            <tr>
+                <td>密　　码</td>
+                <td><input type="password" name="password"><span>*</span></td>
+            </tr>
+            <tr>
+                <td>确认密码</td>
+                <td><input type="password" name="again_password"><span>*</span></td>
+            </tr>
+            <tr>
+                <td>真实姓名</td>
+                <td><input type="text" name="name"><span>*</span></td>
+            </tr>
+            <tr>
+                <td>昵　　称</td>
+                <td><input type="text" name="nickname"></td>
+            </tr>
+            <tr>
+                <td>性　　别</td>
+                <td>  <input type="radio" name="sex" value="男" checked="checked">男
+                    <input type="radio" name="sex" value="女">女
+                </td>
+            </tr>
+            <tr>
+                <td>所在省份</td>
+                <td>
+                    <select name="province">
+                        <option value="北京市">北京市</option>
+                        <option value="天津市">天津市</option>
+                        <option value="上海市">上海市</option>
+                        <option value="重庆市">重庆市</option>
+                        <option value="河北省">河北省</option>
+                        <option value="山西省">山西省</option>
+                        <option value="辽宁省">辽宁省</option>
+                        <option value="吉林省">吉林省</option>
+                        <option value="黑龙江省">黑龙江省</option>
+                        <option value="江苏省">江苏省</option>
+                        <option value="浙江省">浙江省</option>
+                        <option value="安徽省">安徽省</option>
+                        <option value="福建省">福建省</option>
+                        <option value="江西省">江西省</option>
+                        <option value="山东省">山东省</option>
+                        <option value="河南省">河南省</option>
+                        <option value="湖北省">湖北省</option>
+                        <option value="湖南省">湖南省</option>
+                        <option value="广东省">广东省</option>
+                        <option value="海南省">海南省</option>
+                        <option value="四川省">四川省</option>
+                        <option value="贵州省">贵州省</option>
+                        <option value="云南省">云南省</option>
+                        <option value="陕西省">陕西省</option>
+                        <option value="甘肃省">甘肃省</option>
+                        <option value="青海省">青海省</option>
+                        <option value="台湾省">台湾省</option>
+                        <option value="内蒙古">内蒙古自治区</option>
+                        <option value="广西">广西壮族自治区</option>
+                        <option value="西藏">西藏自治区</option>
+                        <option value="宁夏">宁夏回族自治区</option>
+                        <option value="新疆">新疆维吾尔自治区</option>
+                        <option value="香港">香港特别行政区</option>
+                        <option value="澳门">澳门特别行政区</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>居住地址</td>
+                <td> <input type="text" name="address"></td>
+            </tr>
+            <tr>
+                <td>邮政编码</td>
+                <td><input type="text" name="post"></td>
+            </tr>
+            <tr>
+                <td>联系电话</td>
+                <td><input type="text" name="tel"><span>*</span></td>
+            </tr>
+            <tr>
+                <td>电子邮箱</td>
+                <td><input type="text" name="email"></td>
+            </tr>
+        </tbody>
+    </table>
+        <br>
+    <div class="button-two">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input class="reseta" type="reset" value="重置">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit" value="注册">
+        <span class="words" style="color:#424040">已有账号<a href="/login">登录..</a></span>
+    </div>
+    </form>
+    <div class="message">
+        <% if (success) { %>
+        <p><%= success %></p>
+        <% } %>
+        <% if (error) { %>
+        <p><%= error %></p>
+        <% } %>
+    </div>
+</div>
+
+</body>
+
+</html>

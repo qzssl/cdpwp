@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目总览</title>
+</head>
+<body>
+<% include ./common/head.html %>
+<div class="wholebody" >
+    <div class="project-body">
+        <!-- 项目总目录  -->
+        <div class="contents">
+            <div class="title-1">
+                <span>项目分类</span>
+            </div>
+            <div>
+                <ul class="project-ul">
+                    <li><a href="project_toll.jsp">   >   点亮童心（玩具）</a></li>
+                    <li><a href="project_book.jsp">   >   梦想启航（书籍）</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 捐赠方式  -->
+        <div class="donate-way">
+            <div class="title-2">
+                <span>捐赠方式</span>
+            </div>
+            <div class="goods">
+                <input type="button" value="捐赠物资">
+                <img alt="手" src="/images/hand.png">
+            </div>
+        </div>
+        <!-- 联系我们  -->
+        <div class="contact-us">
+            <div class="title-3">
+                <span>联系我们</span>
+            </div>
+            <div class="content-words">
+                <span>地址：湖北省武汉市中南民族大学</span><br>
+                <span>邮政编码：430074</span><br>
+                <span>联系电话：800-820-8820</span><br>
+                <span>邮箱：123345634@163.com</span><br>
+            </div>
+        </div>
+        <!-- 项目展示 -->
+        <div class="show-items">
+            <div class="title-4">
+                <span>项目展示</span>
+            </div>
+            <form action="" method="post" target="_self">
+                <div class="project-search">
+                    项目名称:&nbsp;<input type="text" name="pname">	&nbsp;&nbsp;&nbsp;&nbsp;
+                    项目状态：<select name="pstate">
+                    <option value="执行中">执行中</option>
+                    <option value="发起中">发起中</option>
+                    <option value="募捐中">募捐中</option>
+                    <option value="审核中">审核中</option>
+                    <option value="已结束">已结束</option>
+                </select>
+                </div><br>
+                <div class="chaxun">
+                    <input type="submit" value="查询">
+                </div>
+            </form>
+            <div class="window-body">
+                <div class="window">
+                    <div class="img"><img alt="pic-1" src="/myapp/admin/uploadimg/4cbcdef1-0976-4858-9022-45c2b7039016.jpg"></div>
+                    <div class="introduce">
+                        <p>
+                            项目名称 | hello小孩<br>
+                            项目简介 | 帮助贫困地区和处在困境中的孩子的公益项目xgfb<br>
+                            项目时间 | 2017-3-21至2019-3-21<br>
+                            项目状态 | 发起中</p>
+                    </div><form name="form1" action="add_attention.jsp" method="post" target="_self">
+                    <input type="hidden" name="picurl" value="/myapp/admin/uploadimg/4cbcdef1-0976-4858-9022-45c2b7039016.jpg">
+                    <input type="hidden" name="pname" value="hello小孩">
+                    <div class="guanzhu-button">
+                        <img alt="plus" src="/images/plus.png">
+                        <input type="submit" name="go" value="加关注" style="background: #ff9224; color: #fff;">
+                    </div></form>
+                    <div class="juanzhu-button">
+                        <img alt="plus" src="/images/juanzhu-1.png">
+                        <span>我要捐助</span>
+                    </div>
+                </div>
+                <div class="window">
+                    <div class="img"><img alt="pic-1" src="/myapp/admin/uploadimg/e9721486-caa0-4651-bead-01993c08ae15.jpg"></div>
+                    <div class="introduce">
+                        <p>
+                            项目名称 | 春蕾计划<br>
+                            项目简介 | "春蕾计划"儿童公益项目，汇聚社会爱心，资助贫困地区失辍学女童继续学业，改善贫困地区办学条件，辅助国家发展儿童少年教育福利事业。
+                            <br>
+                            项目时间 | 1998-3-21至2020<br>
+                            项目状态 | 执行中</p>
+                    </div><form name="form1" action="add_attention.jsp" method="post" target="_self">
+                    <input type="hidden" name="picurl" value="/myapp/admin/uploadimg/e9721486-caa0-4651-bead-01993c08ae15.jpg">
+                    <input type="hidden" name="pname" value="春蕾计划">
+                    <div class="guanzhu-button">
+                        <img alt="plus" src="/images/plus.png">
+                        <input type="submit" name="go" value="加关注" style="background: #ff9224; color: #fff;">
+                    </div></form>
+                    <div class="juanzhu-button">
+                        <img alt="plus" src="/images/juanzhu-1.png">
+                        <span>我要捐助</span>
+                    </div>
+                </div>
+                <div class="window">
+                    <div class="img"><img alt="pic-1" src="/myapp/admin/uploadimg/587484c9-da70-42a8-84c1-d01e9927c002.png"></div>
+                    <div class="introduce">
+                        <p>
+                            项目名称 | 儿童快乐家园<br>
+                            项目简介 | 2014年，为进一步深化留守儿童关爱服务工作，探索农村、社区关爱留守儿童的有效模式.<br>
+                            项目时间 | 2014-9-8至2030-8-4<br>
+                            项目状态 | 执行中</p>
+                    </div><form name="form1" action="add_attention.jsp" method="post" target="_self">
+                    <input type="hidden" name="picurl" value="/myapp/admin/uploadimg/587484c9-da70-42a8-84c1-d01e9927c002.png">
+                    <input type="hidden" name="pname" value="儿童快乐家园">
+                    <div class="guanzhu-button">
+                        <img alt="plus" src="/images/plus.png">
+                        <input type="submit" name="go" value="加关注" style="background: #ff9224; color: #fff;">
+                    </div></form>
+                    <div class="juanzhu-button">
+                        <img alt="plus" src="/images/juanzhu-1.png">
+                        <span>我要捐助</span>
+                    </div>
+                </div>
+                <div class="window">
+                    <div class="img"><img alt="pic-1" src="/myapp/admin/uploadimg/f32bd482-2204-4bfa-a5e0-6d43a649830f.jpg"></div>
+                    <div class="introduce">
+                        <p>
+                            项目名称 | 书香中国<br>
+                            项目简介 | 中央文明办、全国妇联等单位倡导的全民阅读活动,将经典好书和人文关怀送到广大留守儿童、贫困儿童身边
+                            <br>
+                            项目时间 | 2017-3-21至2019-3-21<br>
+                            项目状态 | 审核中</p>
+                    </div><form name="form1" action="add_attention.jsp" method="post" target="_self">
+                    <input type="hidden" name="picurl" value="/myapp/admin/uploadimg/f32bd482-2204-4bfa-a5e0-6d43a649830f.jpg">
+                    <input type="hidden" name="pname" value="书香中国">
+                    <div class="guanzhu-button">
+                        <img alt="plus" src="/images/plus.png">
+                        <input type="submit" name="go" value="加关注" style="background: #ff9224; color: #fff;">
+                    </div></form>
+                    <div class="juanzhu-button">
+                        <img alt="plus" src="/images/juanzhu-1.png">
+                        <span>我要捐助</span>
+                    </div>
+                </div>
+                <div class="window">
+                    <div class="img"><img alt="pic-1" src="/myapp/admin/uploadimg/db9e1885-52a3-4945-b7ab-35744dbb2b6b.jpg"></div>
+                    <div class="introduce">
+                        <p>
+                            项目名称 | 天使的梦<br>
+                            项目简介 | 通过向教育失衡与匮乏地区的老师和学生提供所需最基本的教育资源，帮助贫困学生完成学业<br>
+                            项目时间 | 2017-3-21至2030-8-4<br>
+                            项目状态 | 执行中</p>
+                    </div><form name="form1" action="add_attention.jsp" method="post" target="_self">
+                    <input type="hidden" name="picurl" value="/myapp/admin/uploadimg/db9e1885-52a3-4945-b7ab-35744dbb2b6b.jpg">
+                    <input type="hidden" name="pname" value="天使的梦">
+                    <div class="guanzhu-button">
+                        <img alt="plus" src="/images/plus.png">
+                        <input type="submit" name="go" value="加关注" style="background: #ff9224; color: #fff;">
+                    </div></form>
+                    <div class="juanzhu-button">
+                        <img alt="plus" src="/images/juanzhu-1.png">
+                        <span>我要捐助</span>
+                    </div>
+                </div>
+                <div class="yema">
+                    <form action="project.jsp" method="post" target="_self">
+                        第<font color="#FF0000">1</font>页/共<font color="red">1</font>页&nbsp;
+                        <a href="project.jsp?showPage=1" target="_self"><font color="#0000FF">[首页]</font></a>&nbsp;
+                        [上一页]&nbsp;
+                        [下一页]&nbsp;
+                        <a href="project.jsp?showPage=1" target="_self"><font color="#0000FF">[尾页]</font> </a>&nbsp;
+                        转到
+                        <select name="showPage">
+                            <option value="1" selected="">1</option>
+                        </select>
+                        页&nbsp;
+                        <input type="submit" name="go" value="提交">
+                    </form>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/javascripts/index.js"></script>
+</body>
+</html>

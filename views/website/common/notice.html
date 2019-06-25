@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>公告</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<!-- 公告栏  -->
+<div class="bullet">
+    <div id=Scroll>
+        <div id=ScrollMe style="overflow: hidden; height: 27px">
+            <%for(var i=0;i< news.length;i++){ %>
+            <a target="_blank" href="#"><%=news[i].title%></a>
+            <br>
+            <%}%>
+        </div>
+    </div>
+</div>
+<script>
+
+</script>
+<script src="/javascripts/news.js"></script>
+<script>new srcMarquee("ScrollMe",0,1,856,27,30,3000,3000,27)</script>
+</body>
+</html>

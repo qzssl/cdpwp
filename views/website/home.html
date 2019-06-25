@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <link href="/stylesheets/home.css" rel="stylesheet">
+</head>
+<body>
+<!--右边上下按钮-->
+<div id="right-btn" class="right-btn">
+    <a href="#" class="prev"><img src="/images/icon_arrow-up_light.png" alt="" width="28" height="31" /></a>
+    <a href="#" class="next"><img src="/images/icon_arrow-down_light.png" alt="" width="28" height="31" /></a>
+</div>
+<!--mian-->
+<div id="wrapper">
+    <div id="main">
+        <!-- Section 1-->
+        <section class="section">
+            <div class="pictures-turn">
+                <img alt="zone" src="/images/zone.jpg">
+            </div>
+        </section>
+        <!-- Section 2-->
+        <section class="section" style="background-color:#ffffff">
+            <div class="p40">
+                <div class="body-t">
+                    <div class="touxiang">
+                        <img alt="头像" src="/images/user.png">
+                    </div><br><br>
+                    <span class="username">11</span>
+                </div>
+                <div class="body-m">
+                    <span class="message-1">统计信息</span>
+                    <img class="date1" alt="统计" src="/images/date.png"><br>
+                    <img class="heart" alt="捐助次数" src="/images/heart.png"><br>
+                    <span class="message-3">捐助次数</span>
+                    <span class="message-31">2</span>
+                    <div class="box1"></div><br><br>
+                    <img class="help" alt="求助次数" src="/images/help.png">
+                    <span class="message-4">求助次数</span>
+                    <span class="message-41">0</span>
+                    <div class="box2"></div>
+                </div>
+                <div class="body-b">
+                    <span class="message-2">最近浏览</span>
+                    <img class="foot1" alt="统计" src="/images/foot.png"><br><br>
+                    <ul class="pic-list">
+                        <li class="pic-1"><img alt="图片1" src="/images/pic1.jpg"></li>
+                        <li class="pic-2"><img alt="图片2" src="/images/pic2.jpg"></li>
+                        <li class="pic-3"><img alt="图片3" src="/images/pic3.jpg"></li>
+                        <li class="pic-4"><img alt="图片4" src="/images/pic4.jpg"></li>
+                    </ul>
+                </div>
+                <div class="right-message">
+                    <span class="news">最新消息：</span>
+                    <div class="container">
+                        <div class="main">
+                            <!-- 	<ul class="cbp_tmtimeline"> /* 时间轴竖条  */ -->
+                            <ul class='cbp_tmtimeline'>
+                                <li>
+                                    <time class='cbp_tmtime'><span>2017-06-21</span></time>
+                                    <div class='cbp_tmicon'></div>
+                                    <div class='cbp_tmlabel'><p>去旅行成功赠送到希望工程</p></div>
+                                </li>
+                                <li>
+                                    <time class='cbp_tmtime'><span>2017-06-21</span></time>
+                                    <div class='cbp_tmicon'></div>
+                                    <div class='cbp_tmlabel'><p>万物由来成功赠送到慈弘悦读成长计划</p></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section3 个人资料-->
+        <section class="section">
+            <div class="data-side">
+                <div class="data-left">
+                    <img alt="头像背景" src="/images/light-bg.jpg">
+                    <div class="touxiang-side">
+                        <img alt="头像" src="/images/touxiang.jpg">
+                    </div>
+                    <div class="change" onclick="Cchange()" style="cursor:pointer;">
+                        <img alt="修改资料" src="/images/change.png">
+                        <span>修改资料</span>
+                    </div>
+                    <div class="user">
+                        <!--性别  -->
+                        <span>女</span>
+                    </div>
+                    <div class="data">
+                        <span>个人资料</span>
+                    </div>
+                </div>
+                <div class="data-right">
+                    <table class="forma"><tbody>
+                    <tr>
+                        <td style="text-align:left">用&nbsp;户&nbsp;名</td>
+                        <td><input type="text" name="username" value="11" disabled="disabled"></td>
+                    </tr>
+                    <tr>
+                        <td>密　　码</td>
+                        <td><input type="password" name="key" value="11" disabled="disabled"></td>
+                    </tr>
+                    <tr>
+                        <td>确认密码</td>
+                        <td><input type="password" name="confirm key" value="11" disabled="disabled"></td>
+                    </tr>
+                    <tr>
+                        <td>真实姓名</td>
+                        <td><input type="text" name="realname" value="11" disabled="disabled"></td>
+                    </tr>
+                    <tr>
+                        <td>昵　　称</td>
+                        <td><input type="text" name="nickname" value="11" disabled="disabled"></td>
+                    </tr>
+                    <tr>
+                        <td>性　　别</td>
+                        <td><input type="type" name="sex" value="" disabled="disabled">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>所在省份</td>
+                        <td>
+                            <input type="text" name="province" value="" disabled="disabled">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>居住地址</td>
+                        <td><textarea rows="2" cols="20"  disabled="disabled"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>邮政编码</td>
+                        <td><input type="text" name="postalcode" value="" disabled="disabled"></td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td>联系电话</td>
+                        <td><input type="text" name="tel" value="" disabled="disabled"></td>
+                    </tr>
+                    <tr>
+                        <td>电子邮箱</td>
+                        <td><input type="text" name="email"value="" disabled="disabled">
+                    </tr>
+                    </tbody></table>
+                </div>
+                <div class="data-right1" id="Cc">
+                    <form action="User_xiugaiServlet" method="post">
+                        <table class="forma1"><tbody>
+                        <tr>
+                            <td style="text-align:left">用&nbsp;户&nbsp;名</td>
+                            <td><input type="text" name="username" value="11" disabled="disabled"></td>
+                        </tr>
+                        <tr>
+                            <td>密　　码</td>
+                            <td><input type="password" name="password"></td>
+                        </tr>
+                        <tr>
+                            <td>确认密码</td>
+                            <td><input type="password" name="againPassword"></td>
+                        </tr>
+                        <tr>
+                            <td>真实姓名</td>
+                            <td><input type="text" name="name" ></td>
+                        </tr>
+                        <tr>
+                            <td>昵　　称</td>
+                            <td><input type="text" name="nickname" ></td>
+                        </tr>
+                        <tr>
+                            <td>性　　别</td>
+                            <td><input type="radio" name="sex" value="男">男
+                                <input type="radio" name="sex" value="女">女
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>所在省份</td>
+                            <td>
+                                <Select name="province">
+                                    <option value="北京市">北京市</option>
+                                    <option value="天津市">天津市</option>
+                                    <option value="上海市">上海市</option>
+                                    <option value="重庆市">重庆市</option>
+                                    <option value="河北省">河北省</option>
+                                    <option value="山西省">山西省</option>
+                                    <option value="辽宁省">辽宁省</option>
+                                    <option value="吉林省">吉林省</option>
+                                    <option value="黑龙江省">黑龙江省</option>
+                                    <option value="江苏省">江苏省</option>
+                                    <option value="浙江省">浙江省</option>
+                                    <option value="安徽省">安徽省</option>
+                                    <option value="福建省">福建省</option>
+                                    <option value="江西省">江西省</option>
+                                    <option value="山东省">山东省</option>
+                                    <option value="河南省">河南省</option>
+                                    <option value="湖北省">湖北省</option>
+                                    <option value="湖南省">湖南省</option>
+                                    <option value="广东省">广东省</option>
+                                    <option value="海南省">海南省</option>
+                                    <option value="四川省">四川省</option>
+                                    <option value="贵州省">贵州省</option>
+                                    <option value="云南省">云南省</option>
+                                    <option value="陕西省">陕西省</option>
+                                    <option value="甘肃省">甘肃省</option>
+                                    <option value="青海省">青海省</option>
+                                    <option value="台湾省">台湾省</option>
+                                    <option value="内蒙古自治区">内蒙古自治区</option>
+                                    <option value="广西壮族自治区">广西壮族自治区</option>
+                                    <option value="西藏自治区">西藏自治区</option>
+                                    <option value="宁夏自治区">宁夏回族自治区</option>
+                                    <option value="新疆自治区">新疆维吾尔自治区</option>
+                                    <option value="香港特别行政区">香港特别行政区</option>
+                                    <option value="澳门特别行政区">澳门特别行政区</option>
+                                </Select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>居住地址</td>
+                            <td><textarea rows="3" cols="40" name="address"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>邮政编码</td>
+                            <td><input type="text" name="code"></td>
+                        </tr>
+                        <tr>
+                            <td>联系电话</td>
+                            <td><input type="text" name="tel"></td>
+                        </tr>
+                        <tr>
+                            <td>电子邮箱</td>
+                            <td><input type="text" name="email">
+                        </tr>
+                        </tbody></table>
+                        <input class="tijiao" type="submit" value="提交" onclick="Cchangeback()">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- section4 捐赠情况-->
+        <section class="section">
+            <div class="message-show">
+                <table>
+                    <tbody>
+                    <tr>
+                        <th style="width:15%">物品名称</th>
+                        <th style="width:10%">物品数量</th>
+                        <th style="width:30%">物品描述</th>
+                        <th style="width:10%">捐赠时间</th>
+                        <th style="width:10%">使用指向</th>
+                        <th style="width:10%">物品状态</th>
+                    </tr>
+                    <tr><td>去旅行</td><td>2</td><td>人文、地理、历史、政治尽在其中！</td><td>2017-06-21</td><td>希望工程</td><td>赠送成功</td></tr><tr><td>万物由来</td><td>1</td><td>一套融汇文理史哲、饱含浓浓中国情怀的舌尖百科。</td><td>2017-06-21</td><td>慈弘悦读成长计划</td><td>赠送成功</td></tr>
+                    </tbody>
+                </table>
+                <div class="tiaozhuan">
+                    <form action="homepage2.jsp" method="post" target="_self">
+                        第1页/共1页&nbsp;
+                        <a href="homepage2.jsp?shPage1=1" target="_self">[首页]</a>&nbsp;[上一页]&nbsp;[下一页]&nbsp;
+                        <a href="homepage2.jsp?shPage1=1" target="_self">[尾页]</a>&nbsp;转到
+                        <select name="shPage1"><option value="1" selected>1</option></select>页&nbsp;
+                        <input type="submit" name="go" value="提交"/>
+                    </form>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- Section 5-->
+        <section class="section">
+            <div class="message-show details-show">
+                <table>
+                    <tbody>
+                    <tr>
+                        <th style="width:6%">真实姓名</th>
+                        <th style="width:6%">联系电话</th>
+                        <th style="width:15%">通讯地址</th>
+                        <th style="width:6%">求助类型</th>
+                        <th style="width:10%">物品名称</th>
+                        <th style="width:6%">需求数量</th>
+                        <th style="width:10%">求助描述</th>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="yema">
+                    <form action="homepage2.jsp" method="post" target="_self">
+                        第1页/共0页&nbsp;
+                        <a href="homepage2.jsp?showPage1=1" target="_self">[首页]</a>&nbsp;
+                        [上一页]&nbsp;[下一页]&nbsp;
+                        <a href="homepage2.jsp?showPage1=0" target="_self">[尾页] </a>&nbsp;转到<select name="showPage1"></select>页&nbsp;
+                        <input type="submit" name="go" value="提交"/>
+                    </form>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6-->
+        <section class="section" style="background-image: url('/images/sky.jpg');">
+            <div class="p40">
+                <div class="guanzhu-kuang">
+                    <div class="pic-kuang">
+                        <img alt="logo" src="/myapp/admin/uploadimg/4cbcdef1-0976-4858-9022-45c2b7039016.jpg">
+                    </div>
+                    <div class="words-kuang">
+                        <span>hello小孩</span><br>
+                        <a href="/project/1"><input type="submit" value="查看详情"></a>
+                    </div>
+                </div>
+                <div class="guanzhu-kuang">
+                    <div class="pic-kuang1">
+                        <a href="project.jsp"><img alt="logo" src="/images/plus1.png"></a>
+                    </div>
+                </div>
+                <div class="yema">
+                    <form action="homepage2.jsp" method="post" target="_self">
+                        第1页/共0页&nbsp;
+                        <a href="homepage2.jsp?showPage=1" target="_self">[首页]</a>&nbsp;
+                        [上一页]&nbsp;[下一页]&nbsp;
+                        <a href="homepage2.jsp?showPage=0" target="_self">[尾页]</a>&nbsp;转到<select name="showPage"></select>页&nbsp;
+                        <input type="submit" name="go" value="提交"/>
+                    </form>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div class="back">
+            <input type="submit" value="返回主页" onclick="document.location.href='/'">
+        </div>
+
+    </div>
+</div>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+</div>
+<script src="/javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="/javascripts/pagescroller.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var navLabel = new Array('个人中心','用户主页', '个人资料', '我的捐赠', '我的求助', '我的关注');
+        $('#main').pageScroller({ navigation: navLabel });
+        $('.next').click(function(e){
+            e.preventDefault();
+            pageScroller.next();
+        });
+        $('.prev').click(function(e){
+            e.preventDefault();
+            pageScroller.prev();
+        });
+    });
+</script>
+
+</body>
+</html>

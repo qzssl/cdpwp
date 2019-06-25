@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+<body>
+<div class="load-bg">
+    <!--<img alt="登录背景" src="/images/smilec.jpg">-->
+    <div class="logo">
+        <img alt="logo" src="/images/logo.png">
+    </div>
+    <div class="load-kk">
+        <div class="load-tx">
+            <img alt="load-tx" src="/images/denglu.png">
+        </div>
+        <div class="load-form">
+            <form action="/login" method="post" onclick="check()">
+                <div class="kuanga">
+                    <img alt="用户名" src="/images/user.png">
+                    <span>用户名</span>
+                    <input class="User" type="text" name="username">
+                </div>
+                <div class="kuanga kuangb">
+                    <img alt="密码" src="/images/key.png">
+                    <span>密&nbsp;&nbsp;&nbsp;码</span>
+                    <input class="Key" type="password" name="password">
+                </div>
+                <div class="kuanga kuangb kuangc">
+                    <img alt="验证码" src="/images/code.png">
+                    <span>验证码</span>
+                    <input type="text" id="vcode" name="vcode"/>
+                    <span id="code" title="看不清，换一张">
+                        <img src="/captcha" id="codeImg">
+                    </span>
+                </div>
+                <div class="dengluniu">
+                    <input type="submit" value="登录">
+                </div>
+            </form>
+        </div>
+        <div class="zhuce"> <a href="/register">注册</a></span></div>
+        <div class="dengluniu"><span class="words" style="color:#424040"><a href="/">返回首页</a></span></div>
+
+        <div class="message">
+            <% if (success) { %>
+            <p><%= success %></p>
+            <% } %>
+            <% if (error) { %>
+            <p><%= error %></p>
+            <% } %>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+<script type="text/javascript">
+    var codeImg = document.getElementById('codeImg');//声明一个变量用于存储生成的验证码
+    document.getElementById("code").onclick=changeImg;
+    function changeImg(){
+        codeImg.setAttribute('src','/captcha?'+Math.random())
+    }
+
+</script>
+</html>

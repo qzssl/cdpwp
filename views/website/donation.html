@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>捐赠</title>
+</head>
+<body>
+<% include ./common/head.html %>
+<div class="wholebody">
+    <!-- 捐赠信息填写部分  -->
+    <div class="input">
+        <img alt="boy" src="/images/running5.jpg">
+        <div class="block"></div>
+        <span>请用户填写捐赠信息：</span>
+    </div>
+    <div>
+        <form action="juanzeng_upload.jsp" method="post" enctype="multipart/form-data">
+            &nbsp;
+            <table class="donate-message">
+                <tbody>
+                <tr>
+                    <td class="extend">捐赠物品名称</td>
+                    <td><input type="text" name="name"></td>
+                </tr>
+                <tr>
+                    <td class="extend">捐赠物品类型</td>
+                    <td>
+                        <select name="type">
+                            <option value="玩具">玩具</option>
+                            <option value="书籍">书籍</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="extend">捐赠物品数量</td>
+                    <td><input type="text" name="number"></td>
+                </tr>
+                <tr>
+                    <td class="extend">上传图片</td>
+                    <td align="left">
+                        <input type="file" name="file" class="input1">
+                        <!-- 	<input type="button" name="pic-load" value="…"> --></td>
+                </tr>
+                <!-- <tr>
+                    <td class="extend"></td>
+                    <td class="picture"><img alt="上传脱险" src="img/reading.jpg"></td>
+                </tr> -->
+                <tr>
+                    <td class="extend">物品描述</td>
+                    <td><textarea rows="3" cols="30" name="description"></textarea></td>
+                </tr><tr class="project-choose">
+                    <td class="extend">项目选择</td>
+                    <td>
+                        <input type="radio" name="project" value="春蕾计划">春蕾计划
+                        <input type="radio" name="project" value="希望工程">希望工程
+                        <input type="radio" name="project" value="书香中国">书香中国
+                        <input type="radio" name="project" value="天使的梦">天使的梦<br>
+                        <input type="radio" name="project" value="hello小孩">hello小孩
+                        <input type="radio" name="project" value="儿童快乐家园">儿童快乐家园
+                        <input type="radio" name="project" value="智爱专项基金">众爱专项基金<br>
+                        <input type="radio" name="project" value="青爱工程专项基金">青爱工程专项基金
+                        <input type="radio" name="project" value="智爱专项基金">“拉勾勾儿”项目
+                        <input type="radio" name="project" value="智爱专项基金">智爱专项基金<br>
+                        <input type="radio" name="project" value="慈弘悦读成长计划">慈弘悦读成长计划
+                        <input type="radio" name="project" value="天使之家">天使之家
+                        <input type="radio" name="project" value="众爱专项基金" checked="ok">众爱专项基金
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <div class="button">
+        <input class="button1" type="reset" value="重置">
+        <input class="button2" type="submit" value="提交">
+    </div>
+</div>
+<script src="/javascripts/index.js"></script>
+</body>
+</html>

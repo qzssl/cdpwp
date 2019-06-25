@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>Express</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+<!--横幅-->
+<div class="sy-a">
+    <div class="sy-b">您好，欢迎来到童心漂流公益平台！</div>
+    <div class="sy-c">
+        <% if(user){%>
+        <span>欢迎您：<%= user.uname%></span>|
+        <a  href="/home" >个人中心</a> |<a  href="/loginout" >退出登录</a>
+        <% }else {%>
+        <a  href="/login" >登录</a> | <a href="/register">免费注册</a>
+        <%}%>
+    </div>
+</div>
+<!--logo-->
+<div class="banner">
+    <div class="logo"><img src="/images/logo.png" height="123" width="485"/></div>
+    <!--搜索框-->
+    <div class="search">
+        <form action="" method="post" class="search-form">
+            <input class="search-form-input" type="text"  name="pname" value="请输入项目名称" onfocus="if(value=='请输入项目名称') (value='')" onblur="if (value=='') (value='请输项目名称')"/>
+            <!-- 输入框默认有“请输入关键词”，点击输入框后“请输入关键词”消失 -->
+            <input class="search-form-btn" type="submit" value="&nbsp;"></input>
+        </form>
+    </div>
+</div>
+<!--导航-->
+<div class="head-nav">
+    <ul class="head-nav-ul" >
+        <li><a class="on" id="on" href="/">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+        <li><a class="on" href="/about">关于我们</a></li>
+        <li class="drop-down">
+            <a class="on" id="project" href="#" >公益项目</a>
+            <div class="project-list" id="project-list">
+                <ul class="jiu-list">
+                    <li><a  href="/project">项目总览</a></li>
+                    <li><a href="/project/toll">点亮童心</a></li>
+                    <li><a href="/project/book">梦想启航</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a class="on" href="/information">信息公示</a></li>
+        <li><a class="on" id="atida" href="/donation">我要捐赠</a></li>
+        <li><a class="on" href="/help">我要求助</a></li>
+        <li><a class="on" href="/contact">联系我们</a></li>
+    </ul>
+</div>
+
+</body>
+
+</html>
+

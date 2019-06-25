@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>联系我们</title>
+</head>
+<body>
+<% include ./common/head.html %>
+<div class="wholebody">
+    <div class="kuang">
+        <div class="contact-us-words"><span style="font-family:微软雅黑">联　系</span></div>
+        <div class="picture"><img alt="联系我们" src="/images/contact2.jpg"></div>
+    </div>
+    <div class="kuang1">
+        <div class="contact1"><span style="font-family:微软雅黑">联　系</span></div>
+        <div class="message1"><span style="font-family:微软雅黑">留　言</span></div>
+    </div>
+    <div class="kuang2">
+        <div class="contact2">
+            <span style="font-family:微软雅黑">联系</span>
+        </div>
+        <div class="contact-3">
+            <span class="w1">ADDRESS</span><br>
+            <span class="w2">湖北省武汉市中南民族大学</span><br><br>
+            <span class="w1">POSTALCODE</span><br>
+            <span class="w2">430074</span><br><br>
+            <span class="w1">PHONE</span><br>
+            <span class="w2">800-820-8820</span><br><br>
+            <span class="w1">EMAIL</span><br>
+            <span class="w2">123345634@163.com</span><br>
+        </div>
+    </div>
+    <div class="message2">
+        <span style="font-family:微软雅黑">给我们留言</span>
+    </div>
+    <div class="board">
+        <form name="form1" method="post" action="" target="_self">
+            <input type="hidden" name="Words" value="YES">
+            <!-- <div>您的姓名<input type="text" name="u-name"></div><br><br>
+            <div>您的邮箱<input type="text" name="u-email"></div> -->
+            <div>反馈内容<textarea rows="3" cols="28" name="Content"></textarea></div>
+        </form>
+    </div>
+    <div class="contact-button"><input type="submit" value="提交反馈">
+        <div class="board">由于您当前未登录只能查看留言，<br>请您登陆后再进行留言操作！现在就去<a href="login.jsp">登录</a></div>
+        <!-- 留言板显示部分  -->
+        <div class="message-show">
+            <div class="message3">
+                <span style="font-family:微软雅黑">留言板</span>
+                <table rules="none">
+                    <tbody><tr>
+                        <!-- 	<td align="left" height="40" colspan="2" valign="middle">【用户留言信息】</td> -->
+                    </tr>
+                    <tr>
+                        <td width="20%" style="font-size:16px">用户名：<font color="#0000FF">201421074033</font></td>
+                        <td width="35%" style="font-size:16px">留言时间：<font color="#0000FF">2017-06-15 18:49:13.0</font></td>
+                        <td width="60%" style="font-size:16px">
+                            留言</td>
+                    </tr>
+                    <tr>
+                        <td width="20%" style="font-size:16px">用户名：<font color="#0000FF">201421074033</font></td>
+                        <td width="35%" style="font-size:16px">留言时间：<font color="#0000FF">2017-06-16 10:14:24.0</font></td>
+                        <td width="60%" style="font-size:16px">
+                            发表留言</td>
+                    </tr>
+                    <tr>
+                        <td width="20%" style="font-size:16px">用户名：<font color="#0000FF">201421074033</font></td>
+                        <td width="35%" style="font-size:16px">留言时间：<font color="#0000FF">2017-06-16 10:15:44.0</font></td>
+                        <td width="60%" style="font-size:16px">
+                            发表留言</td>
+                    </tr>
+                    <tr>
+                        <td width="20%" style="font-size:16px">用户名：<font color="#0000FF">admin</font></td>
+                        <td width="35%" style="font-size:16px">留言时间：<font color="#0000FF">2017-06-16 15:56:37.0</font></td>
+                        <td width="60%" style="font-size:16px">
+                            中兴</td>
+                    </tr>
+                    <tr>
+                        <td width="20%" style="font-size:16px">用户名：<font color="#0000FF">201421074033</font></td>
+                        <td width="35%" style="font-size:16px">留言时间：<font color="#0000FF">2017-06-21 13:57:40.0</font></td>
+                        <td width="60%" style="font-size:16px">
+                            政府的住房</td>
+                    </tr>
+                    <tr>
+                        <td width="20%" style="font-size:16px">用户名：<font color="#0000FF">admin</font></td>
+                        <td width="35%" style="font-size:16px">留言时间：<font color="#0000FF">2017-06-21 13:59:44.0</font></td>
+                        <td width="60%" style="font-size:16px">
+                            在的v</td>
+                    </tr>
+
+                    <tr>
+                        <td width="20%" style="font-size:16px">用户名：<font color="#0000FF">201421074033</font></td>
+                        <td width="35%" style="font-size:16px">留言时间：<font color="#0000FF">2017-06-21 16:36:29.0</font></td>
+                        <td width="60%" style="font-size:16px">
+                            大锅饭</td>
+                    </tr>
+                    <tr>
+                        <td width="20%" style="font-size:16px">用户名：<font color="#0000FF">admin</font></td>
+                        <td width="35%" style="font-size:16px">留言时间：<font color="#0000FF">2017-06-21 16:39:11.0</font></td>
+                        <td width="60%" style="font-size:16px">
+                            水电费</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/javascripts/index.js"></script>
+</body>
+</html>
