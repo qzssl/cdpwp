@@ -46,7 +46,7 @@
         for (let i=0;i<slider_dot_ul_li.length;i++){
             slider_dot_ul_li[i].className='gray';
         }
-        console.log(i,slider_dot_ul_li,slider_dot_ul_li[i])
+        // console.log(i,slider_dot_ul_li,slider_dot_ul_li[i])
         slider_dot_ul_li[i].className = "active";
     };
 

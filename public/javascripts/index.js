@@ -19,7 +19,7 @@ _event('.jiu-list','mouseout',function (e) {
     var e = e || window.event;
     var oLi = e.srcElement || ev.target;
     oLi.style.background = 'transparent';
-})
+});
 
 //事件封装
 function  _event(el,eventName,fn) {
@@ -33,39 +33,31 @@ function  _event(el,eventName,fn) {
 /* 新闻框  */
 function turn()
 {
-    var Turn=document.getElementById('dong');
-    Turn.style.background='white';
-    Turn.style.borderTop='3px solid #FFAC12';
-    Turn.style.color='#FFAC12';
-    /*var play=document.getElementById('ds');
-    play.style.background='#C8BFE7';*/
-    var changem=document.getElementById('xiang');
-    changem.style.background='#EFECEC';
-    changem.style.border='0px';
-    changem.style.color='#173653';
-    var turn=document.getElementById('ds');
-    turn.style.display='block';
-    var turn=document.getElementById('xs');
-    turn.style.display='none';
+    var d=document.getElementById('dong');
+    d.style.background='white';
+    d.style.borderTop='3px solid #FFAC12';
+    d.style.color='#FFAC12';
+    var x=document.getElementById('xiang');
+    x.style.background='#EFECEC';
+    x.style.border='0px';
+    x.style.color='#173653';
+    var ds=document.getElementById('ds');
+    ds.style.display='block';
+    var xs=document.getElementById('xs');
+    xs.style.display='none';
 }
 function turn1()
 {
-    var Turna=document.getElementById('xs');
-    Turna.style.display='block';
-    var Turna=document.getElementById('ds');
-    Turna.style.display='none';
-    var Turna=document.getElementById('xiang');
-    Turna.style.background='white';
-    Turna.style.borderTop='3px solid #FFAC12';
-    Turna.style.color='#FFAC12';
-    /*var playa=document.getElementById('ds');
-    playa.style.background='#C7E7F0'; */
-    var changel=document.getElementById('dong');
-    changel.style.background='#EFECEC';
-    changel.style.border='0px';
-    changel.style.color='black';
-    var changerr=document.getElementById('shi');
-    changerr.style.background='#EFECEC';
-    changerr.style.border='0px';
-    changerr.style.color='black';
+    var d=document.getElementById('dong');
+    d.style.background='#EFECEC';
+    d.style.border='0px';
+    d.style.color='black';
+    var x=document.getElementById('xiang');
+    x.style.background='white';
+    x.style.borderTop='3px solid #FFAC12';
+    x.style.color='#FFAC12';
+    var xs=document.getElementById('xs');
+    xs.style.display='block';
+    var ds=document.getElementById('ds');
+    ds.style.display='none';
 }

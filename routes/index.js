@@ -9,16 +9,20 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
     //公告
     const db = require('../db/db');
-    const userModel = require('../models/users');
+    const userModel = require('../models/news');
     // 这里可以同步获取到rows
-    userModel.getAllUsers()
-        .then((result)=>{
+    Promise.all([
+        userModel.getNewsOrNotice(2,3),
+        userModel.getNewsOrNotice(1,4)
+    ])
+    .then((result)=>{
             console.log(result)
+            res.render('website/index', { title: '首页',notice:result[0],news:result[1]});
         })
-        .catch((err)=>{
-            console.log(err)
-        })
-    res.render('website/index', { title: '首页'});
+    .catch((err)=>{
+        res.render('website/index', { title: '首页',notice:[{title:"请求数据失败"}]});
+        console.log(err)
+    });
 });
 
 router.use('/',require('./website/user'));

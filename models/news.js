@@ -3,18 +3,14 @@ var db = require('../db/db');
 
 module.exports={
     //获取公告或者新闻
-    getNewsOrNotice:function (type,num,fn,errFn) {
-
-        if (num==undefined||num==null||num==''){
-            var sql = 'select * from news n,newstype t WHERE n.typeid=t.typeid AND n.typeId='+type+';';
+    getNewsOrNotice:function (id,number) {
+         let sql = 'select * from news ';
+        if (number!==undefined&&number!==null&&number!==''){
+            sql = sql+'n,newstype t WHERE n.typeid=t.typeid AND n.typeId='+id+' LIMIT '+number;
         }else {
-            var sql = 'select * from news n,newstype t WHERE n.typeid=t.typeid AND n.typeId='+type+' LIMIT '+ num+';';
+            sql = sql+ 'n,newstype t WHERE n.typeid=t.typeid AND n.typeId='+id;
         }
-        db.query(sql,function (result) {
-            return fn(result);
-        },function (err) {
-            return errFn(err)
-        })
+        return db.query(sql);
     },
     //通过用户名查询数据
     getInfoByName:function (name,fn,errFn) {

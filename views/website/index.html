@@ -35,6 +35,7 @@
           </div>
       </div>
       <!-- 公告栏  -->
+      <% include ./common/notice.html %>
       <!-- 新闻框 -->
       <div class="news-all">
           <div class="news-title">
@@ -42,28 +43,55 @@
               <div class="xiangmu" id="xiang" onclick="turn1()">项&nbsp;&nbsp;&nbsp;&nbsp;目 </div>
               <div class="dongtai-show"  id="ds">
                   <div class="left-s1">
-                      <div class="pic-ls"><img alt="图1" src="/images/pic-1.jpg"></div>
-                      <a href="###">青年演员李易峰担任“春蕾计划”爱心传播大使</a>
+                      <div class="pic-ls"><img alt="<%=news[0].picname%>" src="<%=news[0].picurl%>"></div>
+                      <a href="###"><%=news[0].title%></a>
                   </div>
+
                   <div class="right-s1">
-                      <div class="pic-rs"><img alt="图2" src="/images/pic-2.jpg"></div>
-                      <a href="###">武警部队第五次向春蕾计划捐款仪式在京举行</a>
-                      <p>9月27日，在国庆67周年前夕，武警部队第五次向“春蕾计划”捐款仪式在北京武警部队机关礼堂举行……</p>
-                  </div>
-                  <div class="right-s2">
-                      <div class="pic-rs"><img alt="" src="/images/pic-3.jpg"></div>
-                      <a href="###">2016“春蕾计划”慈善公益盛典在京举办</a>
-                      <p>12月28日，由中国儿童少年基金会、人民网主办，人民网舆情监测室承办……</p>
-                  </div>
-                  <div class="right-s3">
-                      <div class="pic-rs"><img alt="" src="/images/pic-4.jpg"></div>
-                      <a href="###">众星汇聚 为爱歌唱</a>
-                      <p>12月11日，由中国儿童少年基金会和中央人民广播电台MusicRadio音乐之声和共同主办的……</p>
+                      <%news.map(function(item,index,array){if(index!==0){%>
+                      <div class="right-s1-div">
+                          <div class="pic-rs"><img alt="<%=item.picname%>" src="<%=item.picurl%>"></div>
+                          <a href="###"><%=item.title%></a>
+                          <p><%=item.content%></p>
+                      </div>
+                      <%}})%>
                   </div>
                   <div class="more"><a href="/news">MORE&gt;&gt;</a></div>
               </div>
               <div class="xiangmu-show" id="xs">
-                  <div align="center">
+                  <div align="center" class="item">
+                      <table width="100%" border="0" cellpadding="0" cellspacing="1">
+                          <tr>
+                              <td width="" height="" align="left"><h3>项目：hello小孩</h3></td>
+                          </tr>
+                          <tr>
+                              <td width="10%" height="" align="left"><img style="height:100px; weight:80%;" src="/images/pic-4.jpg"></td>
+                              <td width="70%" height="" align="left">
+                                  项目简介 | 帮助贫困地区和处在困境中的孩子的公益项目xgfb<br>
+                                  项目时间 | 2017-3-21至2019-3-21<br>
+                                  项目状态 | 发起中 %>
+                              </td>
+                          </tr>
+                      </table>
+                      </p>
+                  </div>
+                  <div align="center" class="item">
+                      <table width="100%" border="0" cellpadding="0" cellspacing="1">
+                          <tr>
+                              <td width="" height="" align="left"><h3>项目：hello小孩</h3></td>
+                          </tr>
+                          <tr>
+                              <td width="10%" height="" align="left"><img style="height:100px; weight:80%;" src="/images/pic-4.jpg"></td>
+                              <td width="70%" height="" align="left">
+                                  项目简介 | 帮助贫困地区和处在困境中的孩子的公益项目xgfb<br>
+                                  项目时间 | 2017-3-21至2019-3-21<br>
+                                  项目状态 | 发起中 %>
+                              </td>
+                          </tr>
+                      </table>
+                      </p>
+                  </div>
+                  <div align="center" class="item">
                       <table width="100%" border="0" cellpadding="0" cellspacing="1">
                           <tr>
                               <td width="" height="" align="left"><h3>项目：hello小孩</h3></td>
@@ -154,6 +182,7 @@
       </div>
   </div>
 <script src="/javascripts/banner.js"></script>
+
 <script src="/javascripts/index.js"></script>
 </body>
 
