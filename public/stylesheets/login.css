@@ -1,0 +1,143 @@
+@charset "utf-8";
+/*common*/
+body,h1,h2,h3,p,ul,ol,form,fieldset,figure{margin: 0; padding: 0;}
+body{width:100%; margin:0 auto;background: #fff; font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;}
+img{border: none;}
+ul,ol{list-style: outside none none;}
+a{text-decoration: none;}
+button{border:none;}
+/*-------登录----------*/
+html,body,.load-bg{
+    height: 100%;}
+.load-bg{
+    background: url("../images/smilec.jpg") no-repeat center center;
+    background-size: cover;
+    z-index:-1;
+}
+.logo{
+    height:120px;
+}
+.logo img{
+    width:400px;
+    position: relative;
+    top: 0;
+    left: 30px;
+}
+.load-kk{
+    height:400px;
+    width:395px;
+    position:relative;
+    background: url("../images/load-k.png") no-repeat center center;
+    background-size: 100%;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: 0 auto;
+}
+.load-tx{
+    height:130px;
+}
+.load-tx img{
+    width:130px;
+    display: block;
+    margin: 0 auto;
+}
+
+.kuanga{
+    height:50px;
+    width:360px;
+    border:2px solid #ccc;
+    background-color:rgba(255, 255, 255, 0.7);
+    margin-left:2%;
+}
+.kuanga img{height:50px;width:50px;}
+.kuangb{
+    margin-top:10px;
+}
+
+.kuanga span{
+    position:relative;
+    top:-15px;
+    margin-bottom:10px;
+    font-size:20px;
+    color:#6C6868;
+}
+.kuanga input,.kuangb input{
+    height:40px;
+    width:220px;
+    margin-left:5px;
+    position:relative;
+    top:-20px;
+}
+.kuangc input{
+    height:40px;
+    width:110px;
+    margin-left:5px;
+    position:relative;
+    top:-20px;
+}
+.dengluniu{
+    width:115px;
+    height:45px;
+    margin-top: 2%;
+}
+
+.dengluniu input{
+     background-color:rgba(254, 171, 18, 0.9);
+     border:none;
+     height:45px;
+     width:100px;
+     z-index:999;
+     font-size:20px;
+     font-weight:bold;
+     color:white;margin-left:40%;}
+.showcode{
+    height:45px;
+    width:105px;
+    background-color:red;
+    margin-top:-65px;
+    margin-left:250px;}
+
+.zhuce{
+    margin-top:-35px;
+    margin-left:572px;
+    height:45px;
+    line-height:50px;
+    width:105px;
+    text-align:center;
+    background-color:rgba(254, 171, 18, 0.9);
+    position: absolute;
+    right: 13%;
+    bottom: 34px;
+}
+.zhuce a{
+    background-color:rgba(254, 171, 18, 0.9);
+    border:none;
+    height:45px;
+    width:100px;
+    z-index:999;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+}
+.words{
+    margin-left: 40%;
+}
+#code{
+    left: 246px;
+    display: block;
+    top: -72px;
+    width: 32%;
+}
+#codeImg{
+    width: 100px;
+}
+.message{
+    position: absolute;
+    top: 14%;
+    left: 35%;
+    font-size: 20px;
+    color: #f00;
+}
