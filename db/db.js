@@ -20,10 +20,12 @@ db.query = function sqlBack(sql,value) {
             if (err){reject(err)}
             else{
                 connection.query(sql,value,(err,rows)=>{
-                    rows = JSON.stringify(rows);//把results对象转为字符串，去掉RowDataPacket
-                    rows = JSON.parse(rows);
+                    let result = JSON.stringify(rows)
+                    result=JSON.parse(result);
+                    // rows = JSON.stringify(rows);//把results对象转为字符串，去掉RowDataPacket
+                    // rows = JSON.parse(rows);
                     if (err){reject(err)}
-                    else {resolve(rows)}
+                    else {resolve(result)}
                     //结束会话
                     connection.release();
                 })

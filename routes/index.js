@@ -12,27 +12,25 @@ router.get('/', function(req, res, next) {
     const userModel = require('../models/news');
     // 这里可以同步获取到rows
     Promise.all([
-        userModel.getNewsOrNotice(2,3),
+        userModel.getNewsOrNotice(2),
         userModel.getNewsOrNotice(1,4)
     ])
     .then((result)=>{
-            console.log(result)
             res.render('website/index', { title: '首页',notice:result[0],news:result[1]});
         })
     .catch((err)=>{
         res.render('website/index', { title: '首页',notice:[{title:"请求数据失败"}]});
-        console.log(err)
     });
 });
 
 router.use('/',require('./website/user'));
-// router.use('/',require('./website/main'));
-// router.use('/project',require('./website/project'));
+router.use('/',require('./website/main'));
+router.use('/project',require('./website/project'));
 // router.use('/donation',require('./website/donation'));
 // router.use('/help',require('./website/help'));
 // router.use('/information',require('./website/information'));
 router.use('/captcha',require('./website/captcha'));
-// router.use('/news',require('./website/news'));
+router.use('/news',require('./website/news'));
 
 
 module.exports = router;

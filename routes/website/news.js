@@ -10,11 +10,13 @@ router.get('/',function(req,res,next){
 const newsModel = require('../../models/news');
 //公告
 router.get('/notice',function (req,res,next) {
-    newsModel.getNewsOrNotice(2,'',function (result) {
-        console.log(result)
-    },function (err) {
-        console.log(err)
-    })
+    newsModel.getNewsOrNotice(2)
+        .then(function (data) {
+            console.log(data)
+        })
+        .catch(function (err) {
+            console.log(err)
+        })
 });
 
 

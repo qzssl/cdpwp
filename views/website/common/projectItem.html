@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>item</title>
+</head>
+<body>
+<div class="window-body">
+
+</div>
+<div class="yema">
+    <div class="zxf_pagediv"></div>
+</div>
+
+
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/zxf_page.js" type="text/javascript"></script>
+<script type="text/javascript">
+    console.log('<%=itemId%>')
+    var pageNum=0;//总页数
+    var itemId = '<%=itemId%>';
+    var page = 3;//每页显示条数
+    getData(1,page,itemId);
+    function getData(current,page,type){
+        let data={
+            current:parseInt(current),
+            page:parseInt(page),
+            itemId:parseInt(type)
+        }
+        $.ajax({
+            url:"/project",
+            type:"post",
+            async: false,
+            data:data,
+            success:function (data) {
+                console.log(data)
+                var _data = '';
+                pageNum=data.total;
+                $.each(data.data, function (i, val) {
+                    console.log(data.data[i])
+                    _data +=
+                        " <div class=\"window\">" +
+                        "<div class='img'><img alt='pic-1' src="+data.data[i].picurl+"></div>" +
+                        "<div class='introduce'>"+
+                        "<p>项目名称 | "+data.data[i].pname+"<br></p>"+
+                        "<p>项目简介 | "+data.data[i].description+"<br></p>"+
+                        "<p>项目时间 | "+data.data[i].startTime+"至"+data.data[i].endTime+"<br></p>"+
+                        "<p>项目状态 | "+data.data[i].state+"</p>"+
+                        "<div class=\"guanzhu-button\">"+
+                        "<img alt=\"plus\" src=\"/images/plus.png\">"+
+                        "<span style=\"background: #ff9224;padding:2px 7px;\">加关注</span>"+
+                        "</div>"+
+                        "<div class=\"guanzhu-button juanzhu-button\">"+
+                        "<img alt=\"plus\" src=\"/images/juanzhu-1.png\">"+
+                        "<span>我要捐助</span>"+
+                        "</div>"+
+                        "</div>"+
+                        "</div>"
+                });
+                $('.window-body').html(_data)
+            },
+            error:function (err) {
+                console.log('err:',err)
+            }
+        })
+    }
+
+    $(".zxf_pagediv").createPage({
+        pageNum: Math.ceil(pageNum/page),//总页码
+        current: 1,//当前页
+        shownum: 5,//每页显示页码个数
+//			activepage: "",//当前页选中样式
+//			activepaf: "",//下一页选中样式
+        backfun: function(e) {
+            // console.log(e);//回调
+            //调用数据
+            getData(e.current,page,itemId)
+        }
+    });
+</script>
+</body>
+</html>

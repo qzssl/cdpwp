@@ -13,32 +13,7 @@
         <div class="words"><span>点亮童心（玩具）>></span></div>
     </div>
     <div class="toll-show">
-        <div class="window1">
-            <div class="pic1"><img alt="儿童快乐家园" src="/myapp/admin/uploadimg/587484c9-da70-42a8-84c1-d01e9927c002.png"></div>
-            <div class="introduce1">
-                <span class="name1">儿童快乐家园</span><br>
-                <span class="name2">状态：执行中</span><br>
-            </div>
-        </div>
-        <div class="yema">
-            <form action="project_toll.jsp" method="post" target="_self">
-                第<font color="#FF0000">1</font>页/共<font color="red">1</font>页&nbsp;
-                <a href="project_toll.jsp?showPage=1" target="_self"><font color="#0000FF">[首页]</font></a>&nbsp;
-
-                [上一页]&nbsp;
-
-                [下一页]&nbsp;
-
-                <a href="project_toll.jsp?showPage=1" target="_self"><font color="#0000FF">[尾页]</font> </a>&nbsp;
-                转到
-                <select name="showPage">
-                    <option value="1" selected="">1</option>
-                </select>
-                页&nbsp;
-                <input type="submit" name="go" value="提交">
-            </form>
-            <p></p>
-        </div>
+        <% include ./common/projectItem.html %>
     </div>
 </div>
 <script src="/javascripts/index.js"></script>
