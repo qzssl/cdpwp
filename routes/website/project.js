@@ -7,12 +7,15 @@ const projectModel = require('../../models/project');
 router.get('/',function (req,res,next) {
     res.render('website/project',{itemId:0})
 });
-router.get('/toll',function (req,res,next){
-    res.render('website/project_toll',{title:'点亮童心',itemId:1})
+router.get('/tb/:typeId',function (req,res,next){
+    console.log(req.params)
+    let itemId = parseInt(req.params.typeId);
+    console.log(itemId);
+    res.render('website/project_list',{title:itemId==1?'梦想起航':'点亮童心',itemId:itemId})
 });
-router.get('/book',function (req,res,next) {
+/*router.get('/:typeId',function (req,res,next) {
    res.render('website/project_book',{title:'梦想起航',itemId:2})
-});
+});*/
 
 router.use('/detail',function (req,res,next) {
     res.render('website/project_detail',{title:'项目详情'})

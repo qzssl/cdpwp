@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title><% title %></title>
+    <title><%=title%></title>
     <link rel="stylesheet" href="/stylesheets/zxf_page.css">
 </head>
 <body>
@@ -11,7 +11,7 @@
 <div class="wholebody">
     <div class="toll-banner">
         <img alt="toll" src="/images/C-book.jpg">
-        <div class="words"><span>梦想启航（书籍）>></span></div>
+        <div class="words"><span><%=title%> <%if(itemId===1){%>（书籍）<%}else{%> （玩具）<%}%> &gt;&gt;</span></div>
     </div>
     <div class="toll-show">
         <% include ./common/projectItem.html %>
