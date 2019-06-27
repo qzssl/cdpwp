@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const projectModel = require('../../models/project');
-
+const newsModel = require('../../models/news');
 
 router.get('/',function (req,res,next) {
     res.render('website/project',{itemId:0})
@@ -17,8 +17,20 @@ router.get('/tb/:typeId',function (req,res,next){
    res.render('website/project_book',{title:'梦想起航',itemId:2})
 });*/
 
-router.use('/detail',function (req,res,next) {
-    res.render('website/project_detail',{title:'项目详情'})
+router.get('/detail/:projectId',function (req,res,next) {
+    let id = req.params.projectId;
+    Promise.all([
+        newsModel.getNewsOrNotice(1,10),
+        projectModel.getDetailsById(id)
+    ])
+        .then(result=>{
+            console.log(result)
+            res.render('website/project_detail',{title:'项目详情',project:result[1],news:result[0]})
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+
 });
 
 //分页获取项目数据

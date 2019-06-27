@@ -10,45 +10,33 @@
 
     <!-- 春蕾计划大图 -->
     <div class="big-pic">
-        <img alt="春蕾计划" src="/images/flower1.jpg">
+        <img alt="春蕾计划" src="<%=project[0].bigpic%>">
     </div>
-    <div class="chunlei-introduce">项目介绍</div>
-    <div class="chunlei-news">新闻动态</div>
+    <div class="chunlei-introduce">新闻动态</div>
+    <div class="chunlei-news">项目介绍</div>
     <div class="left-kuang">
-        <div class="chunlei"><img alt="春蕾计划" src="/images/chunleilogo.jpg"></div>
-        <p>1989年，在全国妇联领导下，中国儿童少年基金会发起并组织实施了"春蕾计划"儿童公益项目，汇聚社会爱心，资助贫困地区失辍学女童继续学业，改善贫困地区办学条件，辅助国家发展儿童少年教育福利事业。</p>
-        <p> 多年来，在党和政府的高度重视关怀下，在社会各界的积极参与和慷慨捐助下，通过实施"春蕾计划"—助学行动、成才行动、就业行动、护蕾行动等，
-            受益对象由接受九年义务教育的女童到女高中生、女大学生，由农村贫困家庭儿童到留守流动儿童，由对大龄女童进行实用技术培训到春蕾教师培训，
-            由资助女童学业到关爱女童安全，形成了关爱儿童特别是女童教育、安全、健康资助体系。</p>
-        <p>截至目前，“春蕾计划”已资助女童345万人次，捐建春蕾学校1489所，对52.3万人次女童进行实用技术培训，
-            编写发放护蕾手册150万套。已经有一大批春蕾生成长成才，成为女军官、女教师、女医生、女科技工作者等，在工作岗位上表现出色。 </p>
+        <ul>
+            <%news.map(function(item,index,array){%>
+            <li>
+                <a href="/news/details/<%=item.newsId%>"><%=item.title%></a>
+            </li>
+            <%})%>
+        </ul>
     </div>
     <div class="right-kuang">
-        <div class="news-1">
-            <div class="pic-1"><img alt="图1" src="/images/pic-1.jpg"></div>
-            <a href="###">青年演员李易峰担任“春蕾计划”爱心传播大使</a>
-        </div>
-        <div class="news-2">
-            <div class="pic-2"><img alt="图2" src="/images/pic-2.jpg"></div>
-            <div class="word-2">
-                <a href="###">武警部队第五次向春蕾计划捐款仪式在京举行</a><br><br>
-                <span>12月28日，由中国儿童少年基金会、人民网主办，人民网舆情监测室承办……</span>
-            </div>
-        </div>
-        <div class="news-2">
-            <div class="pic-2"><img alt="图3" src="/images/pic-3.jpg"></div>
-            <div class="word-2">
-                <a href="###">2016“春蕾计划”慈善公益盛典在京举办</a><br><br>
-                <span>12月28日，由中国儿童少年基金会、人民网主办，人民网舆情监测室承办，原森态、稻香村、好想你、绿之韵、葆婴等爱心企业协办的“2016春蕾计划慈善公益盛典”在人民日报新媒体大厦隆重举行……</span>
-            </div>
-        </div>
-        <div class="news-2">
-            <div class="pic-2"><img alt="图4" src="/images/pic-4.jpg"></div>
-            <div class="word-2">
-                <a href="###">众星汇聚 为爱歌唱</a><br><br>
-                <span>12月11日，由中国儿童少年基金会和中央人民广播电台MusicRadio音乐之声和共同主办的“2016MusicRadio我要上学 映客直播 1200助学行动”爱心晚会举办……</span>
-            </div>
-        </div>
+        <h2><%=project[0].pname%></h2>
+        <p class="p1"><%=new Date(project[0].createTime).getFullYear()%>-
+            <%=new Date(project[0].createTime).getMonth()+1<10?'0'+(new Date(project[0].createTime).getMonth()+1):new Date(project[0].createTime).getMonth()+1%>-
+            <%=new Date(project[0].createTime).getDate()<10?'0'+new Date(project[0].createTime).getDate():new Date(project[0].createTime).getDate()%>&nbsp;
+            <%=new Date(project[0].createTime).getHours()<10?'0'+new Date(project[0].createTime).getHours():new Date(project[0].createTime).getHours()%>:
+            <%=new Date(project[0].createTime).getMinutes()<10?'0'+new Date(project[0].createTime).getMinutes():new Date(project[0].createTime).getMinutes()%>
+            <span class="pipe">|</span>
+            发布者: <a href="#"><%=project[0].name%></a>
+            <span class="pipe">|</span>
+            查看: <em id="_viewnum"><%=project[0].pv%></em>
+            <span class="pipe">|</span>
+            评论: <%=project[0].comments%></p>
+        <%=project[0].description%>
     </div>
 </div>
 <script src="/javascripts/index.js"></script>

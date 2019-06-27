@@ -4,11 +4,10 @@ const db = require('../db/db');
 module.exports={
     //获取公告或者新闻
     getNewsOrNotice:function (id,number) {
-         let sql = 'select * from news ';
+         let sql = 'select * from news n,newstype t WHERE n.typeid=t.typeid AND  n.typeId='+id;
         if (number!==undefined&&number!==null&&number!==''){
-            sql = sql+'n,newstype t WHERE n.typeid=t.typeid AND n.typeId='+id+' LIMIT '+number;
+            sql = sql+' LIMIT '+number;
         }else {
-            sql = sql+ 'n,newstype t WHERE n.typeid=t.typeid AND n.typeId='+id;
         }
         return db.query(sql);
     },

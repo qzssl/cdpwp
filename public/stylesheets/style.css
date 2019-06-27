@@ -5,6 +5,7 @@ body{width:100%; margin:0 auto;background: #fff; font-family: 'PingFang SC', 'He
 img{display: block;border: none;}
 ul,ol{list-style: outside none none;}
 a{text-decoration: none;}
+a:hover{color:#000;}
 button{border:none;}
 /*横幅*/
 .sy-a{background: url("../images/hf-bg.jpg");height:30px;}
@@ -21,13 +22,13 @@ button{border:none;}
 /* 导航条  */
 .head-nav-ul{margin:0;padding:0;list-style:none;height:50px;padding-left:30px;border-bottom:10px solid #ffab11;}
 .head-nav-ul li{float:left;margin-top:20px;}
-.on{background:url(../images/daohangtiao.jpg);text-decoration:none;display:block;height:30px;line-height:30px;width:120px;color:#FFFFFF;font-family:"微软雅黑";font-weight:bold;font-size:18px;margin-bottom:1px;text-align:center;}
-#on,a:hover{background-position:0 30px;}
+a.on{background:url(../images/daohangtiao.jpg);text-decoration:none;display:block;height:30px;line-height:30px;width:120px;color:#FFFFFF;font-family:"微软雅黑";font-weight:bold;font-size:18px;margin-bottom:1px;text-align:center;}
+#on,head-nav-ul a:hover{background-position:0 30px;}
 .project-list{display: none;position: absolute;}
 .jiu-list{margin:0;padding:0;background-color:rgba(255, 172, 18, 0.6);width:120px;height:90px;position:relative;z-index:999;}
 .project-list ul li{height:30px;line-height:30px;width:121px;margin: 0 auto;}
 .project-list ul li a{text-decoration:none;    display: block;width: 100%;text-align: center;}
-.project-list ul li a,a:hover{color:white;}
+.project-list ul li a,head-nav-ul ul li a:hover{color:white;}
 .project-list a{font-family:微软雅黑;font-size:18px;}
 /*-----------首页--------------*/
 /*banner*/
@@ -149,6 +150,8 @@ button{border:none;}
 .img img{width:100%;height:100%}
 .introduce{float: left; width:64%;height:85%;margin-left:3.5%;margin-top:8px;}
 .introduce p{line-height: 22px; overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;margin-left:10px;font-size:13px}
+.introduce p a{color:#000;}
+.introduce p a:hover{color:#000;text-decoration: underline;}
 .guanzhu-button{cursor: pointer; position: relative;/*bottom: 17px;*/left: 12%;float:left;width:98px;height:30px;background-color:#ffac12;color:#fff;border-radius:5px}
 .guanzhu-button input{border:0;background-color:transparent;font-size:15px}
 .juanzhu-button{left: 15%;}
@@ -228,17 +231,8 @@ input.button2{position:absolute;margin-left:400px;margin-top:-70px;width:80px;he
 .chunlei-introduce,.chunlei-news{font-family:微软雅黑;}
 .chunlei-news{height:30px; width:100px; position: absolute; top:330px; left:425px; font-size:20px;}
 .left-kuang{width:25%; padding-bottom:20px; background-color:white; position: absolute; margin-left:6%; margin-top:370px;}
-.chunlei{width:95%; height:100px; border:1px solid #ccc; position:relative; margin-left:8px; margin-top:10px;}
-.chunlei img{width:100%; height:100%;}
-.left-kuang p{width:90%; text-indent:2em; margin-left:5%; color:#666666;}
-.right-kuang{width:60%; height:900px;background-color:white; position: absolute; margin-left:33%; margin-top:370px;}
-.news-1{width:95%; height:370px; border-bottom:1px solid #ccc; position:relative; left:2.5%; margin-top:20px;}
-.pic-1{width:98%; height:90%; /* border:1px solid black; */ margin-left:1%;}.pic-1 img{width:100%; height:100%;}
-.news-1 a,.news-1 a:hover{position:absolute; margin-left:30%; margin-top:10px; color:black;}
-.news-1 a,.word-2 a{text-decoration:none; color:#666666;}
-.news-1 a:hover,.word-2 a:hover{text-decoration:underline; color:black;}
-.news-2{width:95%; height:150px; border-bottom:1px solid #ccc; position:relative; left:2.5%; margin-top:10px;}
-.pic-2{width:30%; height:96%; }
-.pic-2 img{width:100%; height:100%;}
-.word-2{width:60%; height:100px; position: absolute; margin-left:33%; margin-top:-120px;}
-.word-2 span{color:#666666;}
+.left-kuang li{width: 296px;margin: 20px auto;overflow: hidden;text-overflow: ellipsis;word-break: keep-all;}
+.left-kuang li a{color:#000;}
+.left-kuang li a:hover{color:#f00;text-decoration: underline;}
+.right-kuang{width:60%; height:900px;background-color:white; position: absolute; margin-left:33%; margin-top:370px;padding:20px;}
+.right-kuang h2,.right-kuang .p1{text-align: center;margin:10px;}
