@@ -236,3 +236,4 @@ input.button2{position:absolute;margin-left:400px;margin-top:-70px;width:80px;he
 .left-kuang li a:hover{color:#f00;text-decoration: underline;}
 .right-kuang{width:60%; height:900px;background-color:white; position: absolute; margin-left:33%; margin-top:370px;padding:20px;}
 .right-kuang h2,.right-kuang .p1{text-align: center;margin:10px;}
+.right-kuang a{color: #000;}

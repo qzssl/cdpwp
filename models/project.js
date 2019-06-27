@@ -30,7 +30,13 @@ module.exports={
 
     //更新评论数
     updateComments:function (value) {
-        let _sql = "update project set comments=? where project=?"
+        let _sql = "update project set comments=? where projectId=?"
+        return db.query(_sql,value);
+    },
+
+    //更新阅读数
+    updatePv:function (value) {
+        let _sql = "update project set pv=? where projectId=?"
         return db.query(_sql,value);
     }
 };

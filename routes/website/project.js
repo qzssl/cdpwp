@@ -17,20 +17,27 @@ router.get('/tb/:typeId',function (req,res,next){
    res.render('website/project_book',{title:'梦想起航',itemId:2})
 });*/
 
-router.get('/detail/:projectId',function (req,res,next) {
+router.get('/detail/:projectId', (req,res,next)=> {
     let id = req.params.projectId;
+    let news,project,comment,pv;
+
     Promise.all([
-        newsModel.getNewsOrNotice(1,10),
-        projectModel.getDetailsById(id)
+        newsModel.getNewsOrNotice(1,10),//获取新闻信息
+        projectModel.getDetailsById(id),
+
     ])
         .then(result=>{
-            console.log(result)
-            res.render('website/project_detail',{title:'项目详情',project:result[1],news:result[0]})
+            pv = parseInt(result[1][0].pv);
+            pv+=1;
+            console.log(result[1][0].pv,pv)
+            projectModel.updatePv([pv,id])
+                .then()
+                .catch(err=>{console.log(err)})
+            res.render('website/project_detail',{title:'项目详情',project:result[1],news:result[0]});
         })
         .catch(err=>{
-            console.log(err)
+            console.log(err);
         })
-
 });
 
 //分页获取项目数据
