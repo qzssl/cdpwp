@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title><%=project[0].pname%></title>
 </head>
 <body>
 <% include ./common/head.html %>
@@ -37,6 +37,49 @@
             <span class="pipe">|</span>
             评论: <%=project[0].comments%></p>
         <%=project[0].description%>
+
+        <div class="footer-comment">
+            <ul>
+                <li>
+                    <a class="S_txt2" href="javascript:void(0);">
+                        <em class="collect"> </em>
+                        <em>收藏</em>
+                    </a>
+                </li>
+                <li>
+                    <a class="S_txt2" href="javascript:void(0);">
+                        <em class="collect"> </em>
+                        <em>留言</em>
+                    </a>
+                </li>
+                <li>
+                    <a class="S_txt2" href="javascript:void(0);">
+                        <em class="collect">û</em>
+                        <em>评论数</em>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--评论列表-->
+        <div class="comment">
+            <h2>评论列表</h2>
+            <div class="com-item">
+                <ul>
+                    <li>
+                        <h3>dhdh &nbsp;&nbsp;2019-06-12</h3>
+                        <p>可以上传文件, 在博客主页 : "管理" ----> "文件" .
+                        可上传的文件格式有 : .zip .rar .js .css .xml .7z .ico .pdf .ppt .pptx .xap .xpi .swf .apk .cdf .gif .tar .gz .sh .bmp
+                        然后记下文件下载地址, 插入到博客的超链里.</p>
+                    </li>
+                    <li>
+                        <h3>dhdh &nbsp;&nbsp;2019-06-12</h3>
+                        <p>可以上传文件, 在博客主页 : "管理" ----> "文件" .
+                            可上传的文件格式有 : .zip .rar .js .css .xml .7z .ico .pdf .ppt .pptx .xap .xpi .swf .apk .cdf .gif .tar .gz .sh .bmp
+                            然后记下文件下载地址, 插入到博客的超链里.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
 </div>
 <script src="/javascripts/index.js"></script>
