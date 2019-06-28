@@ -43,7 +43,7 @@
                 <li>
                     <a class="S_txt2" href="javascript:void(0);">
                         <em class="collect"> </em>
-                        <em>收藏</em>
+                        <em><%=project[0].comments%></em>
                     </a>
                 </li>
                 <li>
@@ -55,11 +55,21 @@
                 <li>
                     <a class="S_txt2" href="javascript:void(0);">
                         <em class="collect">û</em>
-                        <em>评论数</em>
+                        <em>收藏</em>
                     </a>
                 </li>
             </ul>
         </div>
+
+        <div class="make " style="display: block;overflow: hidden;">
+            <img src="/images/d9e5634djw1east9pi6bej2050050dfw.jpg" style="float: left">
+            <form style="margin-left: 10px;">
+                <input type="text" style="height: 40px;float: left;width: 600px;">
+                <button type="submit" style="width: 200px;float: right;">发表评论</button>
+            </form>
+
+        </div>
+
         <!--评论列表-->
         <div class="comment">
             <h2>评论列表</h2>
