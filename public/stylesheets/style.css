@@ -33,7 +33,8 @@ a.on{background:url(../images/daohangtiao.jpg);text-decoration:none;display:bloc
 .project-list a{font-family:微软雅黑;font-size:18px;}
 /*-----------首页--------------*/
 /*banner*/
-.wholebody{background-color:#FEF7DD;margin-top:-5px;height:1300px;position:relative;}
+.wholebody{background-color:#FEF7DD;margin-top:-5px;min-height:1300px;position:relative;    height: auto;
+    overflow: hidden;}
 .slider, .slider .slider-img {overflow: hidden;height: 550px;margin-top:-20px}
 .slider {width: 1300px;margin: 5px auto;position: relative;}
 .slider:hover .slider-btn {color: #fff;text-shadow: 0 0 5px #666;}
@@ -238,10 +239,19 @@ input.button2{position:absolute;margin-left:400px;margin-top:-70px;width:80px;he
 .right-kuang{width:60%; background-color:white; position: absolute; margin-left:33%; margin-top:370px;padding:20px 20px 0;}
 .right-kuang h2,.right-kuang .p1{text-align: center;margin:10px;}
 .right-kuang a{color: #000;}
-.footer-comment{margin:20px auto 0;padding:10px 0 0;}
+.footer-comment{margin:20px auto;padding:10px 0 0;}
 .footer-comment ul{overflow: hidden;margin:0 auto;}
 .footer-comment li{float: right;text-align: center;width: 9%;border-right: 1px solid #ccc;    font-size: 14px;height: 20px;line-height: 20px;}
 .footer-comment li:nth-child(1){border: none;}
+.make .textarea{font-size: 14px;line-height: 20px;min-height: 40px; float: left; width: 655px; margin-left: 10px;outline: 0;
+    _height: 120px;
+    padding: 3px;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: 1px solid rgba(82, 168, 236, 0.8);
+}
+.make button{cursor: pointer; width: 75px;float: right;height: 39px;border-radius: 5px;background: #ffab11;color: #fff;margin-right: 96px;margin-top: 20px;}
 .footer-comment .collect{font-style: inherit; font-family: "wbficonregular" !important;display: inline-block;-webkit-font-smoothing: antialiased;}
 @font-face {font-family: 'wbficonregular';src: url("../font/wbficon.eot?id=15835cb3647a4fcc") ;
     src: url("../font/wbficon.eot?id=15835cb3647a4fcc#iefix")  format('embedded-opentype'),

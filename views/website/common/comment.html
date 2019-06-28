@@ -1,0 +1,46 @@
+
+<div class="comment">
+    <h2>评论列表</h2>
+    <div class="com-item">
+        <ul>
+        </ul>
+    </div>
+</div>
+<script src="/javascripts/jquery.min.js"></script>
+<script>
+
+    $(function () {
+        console.log()
+        $.ajax({
+            url: "/project/comment",
+            data: {id: "<%=id%>"},
+            type: "post",
+            success: result => {
+
+                let str = '';
+                result.map(function (item) {
+                    str = str + '<li><h3>' + item.uname + '&nbsp;&nbsp;' + format(item.createtime) + '</h3>' +
+                        '<p>' + item.content + '</p> </li>'
+
+                })
+                $('.com-item ul').html(str);
+            },
+            error: err => {
+                console.log(err)
+            }
+        })
+
+        function format(value) {
+            let d = new Date(value);
+            let year = d.getFullYear();
+            let month = d.getMonth() + 1;
+            let date = d.getDate();
+            let ih = d.getHours(), im = d.getMinutes(), is = d.getSeconds();
+            console.log(year + '-' + (month < 10 ? ('0' + month) : month))
+            return year + '-' +(month < 10 ? ('0' + month) : month) + '-' +
+                (date < 10 ? ('0' + date) : date )+ '  ' + (ih < 10 ? ('0' + ih) : ih) + ':' +
+                (im < 10 ? ('0' + im) : im )+ ':' + (is < 10 ? ('0' + is) : is);
+        }
+    })
+</script>
+

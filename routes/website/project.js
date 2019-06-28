@@ -3,6 +3,7 @@ const router = express.Router();
 
 const projectModel = require('../../models/project');
 const newsModel = require('../../models/news');
+const commentModel = require('../../models/comment');
 
 router.get('/',function (req,res,next) {
     res.render('website/project',{itemId:0})
@@ -13,9 +14,6 @@ router.get('/tb/:typeId',function (req,res,next){
     console.log(itemId);
     res.render('website/project_list',{title:itemId==1?'梦想起航':'点亮童心',itemId:itemId})
 });
-/*router.get('/:typeId',function (req,res,next) {
-   res.render('website/project_book',{title:'梦想起航',itemId:2})
-});*/
 
 router.get('/detail/:projectId', (req,res,next)=> {
     let id = req.params.projectId;
@@ -23,13 +21,11 @@ router.get('/detail/:projectId', (req,res,next)=> {
 
     Promise.all([
         newsModel.getNewsOrNotice(1,10),//获取新闻信息
-        projectModel.getDetailsById(id),
-
+        projectModel.getDetailsById(id)
     ])
         .then(result=>{
             pv = parseInt(result[1][0].pv);
             pv+=1;
-            console.log(result[1][0].pv,pv)
             projectModel.updatePv([pv,id])
                 .then()
                 .catch(err=>{console.log(err)})
@@ -39,6 +35,16 @@ router.get('/detail/:projectId', (req,res,next)=> {
             console.log(err);
         })
 });
+
+//评论
+router.post('/comment',(req,res,next)=>{
+    let id = req.body.id;
+    commentModel.commentList(id)
+        .then(re=>{
+            res.send(re)
+        })
+        .catch(err=>console.log(err))
+})
 
 //分页获取项目数据
 router.post('/', function (req,res,next) {

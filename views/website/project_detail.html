@@ -33,9 +33,9 @@
             <span class="pipe">|</span>
             发布者: <a href="#"><%=project[0].name%></a>
             <span class="pipe">|</span>
-            查看: <%=project[0].pv%>
+            查看: <%=project[0].pv||0%>
             <span class="pipe">|</span>
-            评论: <%=project[0].comments%></p>
+        </p>
         <%=project[0].description%>
 
         <div class="footer-comment">
@@ -43,15 +43,15 @@
                 <li>
                     <a class="S_txt2" href="javascript:void(0);">
                         <em class="collect"> </em>
-                        <em><%=project[0].comments%></em>
+                        <em class="com_text"><%=project[0].comments||0%></em>
                     </a>
                 </li>
-                <li>
-                    <a class="S_txt2" href="javascript:void(0);">
+                <!--<li>
+                    <a class="S_txt2" href="javascript:void(0);" onclick="show()">
                         <em class="collect"> </em>
                         <em>留言</em>
                     </a>
-                </li>
+                </li>-->
                 <li>
                     <a class="S_txt2" href="javascript:void(0);">
                         <em class="collect">û</em>
@@ -63,35 +63,64 @@
 
         <div class="make " style="display: block;overflow: hidden;">
             <img src="/images/d9e5634djw1east9pi6bej2050050dfw.jpg" style="float: left">
-            <form style="margin-left: 10px;">
-                <input type="text" style="height: 40px;float: left;width: 600px;">
-                <button type="submit" style="width: 200px;float: right;">发表评论</button>
-            </form>
-
+                <div class="textarea" contenteditable="true" id="comment"></div>
+                <button type="submit" onclick="make()">发表评论</button>
         </div>
 
         <!--评论列表-->
-        <div class="comment">
-            <h2>评论列表</h2>
-            <div class="com-item">
-                <ul>
-                    <li>
-                        <h3>dhdh &nbsp;&nbsp;2019-06-12</h3>
-                        <p>可以上传文件, 在博客主页 : "管理" ----> "文件" .
-                        可上传的文件格式有 : .zip .rar .js .css .xml .7z .ico .pdf .ppt .pptx .xap .xpi .swf .apk .cdf .gif .tar .gz .sh .bmp
-                        然后记下文件下载地址, 插入到博客的超链里.</p>
-                    </li>
-                    <li>
-                        <h3>dhdh &nbsp;&nbsp;2019-06-12</h3>
-                        <p>可以上传文件, 在博客主页 : "管理" ----> "文件" .
-                            可上传的文件格式有 : .zip .rar .js .css .xml .7z .ico .pdf .ppt .pptx .xap .xpi .swf .apk .cdf .gif .tar .gz .sh .bmp
-                            然后记下文件下载地址, 插入到博客的超链里.</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <%- include('./common/comment.html',{id:project[0].projectId}) %>
     </div>
 </div>
+<!--登录层-->
+
 <script src="/javascripts/index.js"></script>
+<script src="/javascripts/jquery.min.js"></script>
+<script>
+
+
+
+    function make() {
+        var ele = document.getElementById('comment');
+        var comment = ele.innerText;
+        var user = "<%=user%>";
+        // console.log(user)
+        if (user==undefined||user==null||user==''){
+            window.location.href ='/login';
+            return false;
+        }
+        $.ajax({
+            url:"/comment/<%=project[0].projectId%>",
+            data: {comment:comment},
+            type:"post",
+            success:result=>{
+                $('.com_text').html(result.comments);
+                ele.innerText = '';
+
+                let str = '';
+                result.all.map(function (item) {
+                    str = str + '<li><h3>' + item.uname + '&nbsp;&nbsp;' + format(item.createtime) + '</h3>' +
+                        '<p>' + item.content + '</p> </li>'
+
+                })
+                $('.com-item ul').html(str);
+
+                console.log(result)
+            },
+            error:err=>{console.log(err)}
+        })
+    }
+
+    function format(value) {
+        let d = new Date(value);
+        let year = d.getFullYear();
+        let month = d.getMonth() + 1;
+        let date = d.getDate();
+        let ih = d.getHours(), im = d.getMinutes(), is = d.getSeconds();
+        console.log(year + '-' + (month < 10 ? ('0' + month) : month))
+        return year + '-' +(month < 10 ? ('0' + month) : month) + '-' +
+            (date < 10 ? ('0' + date) : date )+ '  ' + (ih < 10 ? ('0' + ih) : ih) + ':' +
+            (im < 10 ? ('0' + im) : im )+ ':' + (is < 10 ? ('0' + is) : is);
+    }
+</script>
 </body>
 </html>
