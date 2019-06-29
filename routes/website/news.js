@@ -12,7 +12,7 @@ const newsModel = require('../../models/news');
 router.get('/notice',function (req,res,next) {
     newsModel.getNewsOrNotice(2)
         .then(function (data) {
-            console.log(data)
+            // console.log(data)
         })
         .catch(function (err) {
             console.log(err)

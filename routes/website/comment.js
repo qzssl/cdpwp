@@ -7,8 +7,8 @@ const projectModel = require('../../models/project');
 
 //评论
 router.post('/:projectId', async (req,res,next)=>{
-    console.log(req.params);
-    console.log(req.body)
+    // console.log(req.params);
+    // console.log(req.body)
     let projectId = req.params.projectId,
         comments = req.body.comment,project,
         time = new Date();

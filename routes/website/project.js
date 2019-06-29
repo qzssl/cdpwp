@@ -9,9 +9,9 @@ router.get('/',function (req,res,next) {
     res.render('website/project',{itemId:0})
 });
 router.get('/tb/:typeId',function (req,res,next){
-    console.log(req.params)
+    // console.log(req.params)
     let itemId = parseInt(req.params.typeId);
-    console.log(itemId);
+    // console.log(itemId);
     res.render('website/project_list',{title:itemId==1?'梦想起航':'点亮童心',itemId:itemId})
 });
 
@@ -51,7 +51,7 @@ router.post('/', function (req,res,next) {
     let current = parseInt(req.body.current);
     let page = parseInt(req.body.page);
     let id = parseInt(req.body.itemId);
-    console.log(current,page,id)
+    // console.log(current,page,id)
     Promise.all([
         projectModel.getTotal(id),
         projectModel.getBookOrToll(current,page,id)

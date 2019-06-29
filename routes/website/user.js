@@ -89,7 +89,7 @@ router.post('/register',function (req,res,next) {
     userModel.register([info.username, info.password,info.name,info.nickname,info.sex,info.province,info.address,
     info.post,info.tel,info.email])
         .then((result)=>{
-            console.log(result)
+            // console.log(result)
             req.flash('success','注册成功');
             return res.redirect('/register')
         })
