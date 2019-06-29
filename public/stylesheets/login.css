@@ -13,6 +13,7 @@ html,body,.load-bg{
     background: url("../images/smilec.jpg") no-repeat center center;
     background-size: cover;
     z-index:-1;
+    min-height: 600px;
 }
 .logo{
     height:120px;
@@ -69,7 +70,7 @@ html,body,.load-bg{
     width:220px;
     margin-left:5px;
     position:relative;
-    top:-20px;
+    top:-21px;
 }
 .kuangc input{
     height:40px;

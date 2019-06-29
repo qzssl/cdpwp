@@ -16,7 +16,7 @@
 <script src="/javascripts/jquery.min.js"></script>
 <script src="/javascripts/zxf_page.js" type="text/javascript"></script>
 <script type="text/javascript">
-    console.log('<%=itemId%>')
+    console.log('<%=itemId%>');
     var pageNum=0;//总页数
     var itemId = '<%=itemId%>';
     var page = 3;//每页显示条数
@@ -46,14 +46,15 @@
                         "<p>项目简介 | <a href='/project/detail/"+data.data[i].projectId+"'>"+data.data[i].description+"</a><br></p>"+
                         "<p>项目时间 | "+data.data[i].startTime+"至"+data.data[i].endTime+"<br></p>"+
                         "<p>项目状态 | "+data.data[i].state+"</p>"+
-                        "<div class=\"guanzhu-button\">"+
+                        "<div class=\"wp-btn\">"+
+                        "<button class=\"guanzhu-button\">"+
                         "<img alt=\"plus\" src=\"/images/plus.png\">"+
                         "<span style=\"background: #ff9224;padding:2px 7px;\">加关注</span>"+
-                        "</div>"+
-                        "<div class=\"guanzhu-button juanzhu-button\">"+
+                        "</button>"+
+                        "<button class=\"guanzhu-button juanzhu-button\">"+
                         "<img alt=\"plus\" src=\"/images/juanzhu-1.png\">"+
                         "<span>我要捐助</span>"+
-                        "</div>"+
+                        "</button></div>"+
                         "</div>"+
                         "</div>"
                 });

@@ -39,7 +39,7 @@ router.post('/login',function (req,res,next) {
                 // 用户信息写入 session
                 delete re.upassword;
                 req.session.user = re;
-                return res.redirect('/')
+                return res.redirect('back')
             } else {
                 req.flash('error', '账号或密码错误');
                 return res.redirect('/login')

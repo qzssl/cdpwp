@@ -27,9 +27,9 @@ router.use('/',require('./website/user'));
 router.use('/',require('./website/main'));
 router.use('/project',require('./website/project'));
 router.use('/comment',require('./website/comment'));
-// router.use('/donation',require('./website/donation'));
-// router.use('/help',require('./website/help'));
-// router.use('/information',require('./website/information'));
+router.use('/donation',require('./website/donation'));
+router.use('/help',require('./website/help'));
+router.use('/information',require('./website/information'));
 router.use('/captcha',require('./website/captcha'));
 router.use('/news',require('./website/news'));
 

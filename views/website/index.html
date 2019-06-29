@@ -36,121 +36,128 @@
       </div>
       <!-- 公告栏  -->
       <% include ./common/notice.html %>
-      <!-- 新闻框 -->
-      <div class="news-all">
-          <div class="news-title">
-              <div class="dongtai"  id="dong"  onclick="turn()">最新动态 </div>
-              <div class="xiangmu" id="xiang" onclick="turn1()">项&nbsp;&nbsp;&nbsp;&nbsp;目 </div>
-              <div class="dongtai-show"  id="ds">
-                  <div class="left-s1">
-                      <div class="pic-ls"><img alt="<%=news[0].picname%>" src="<%=news[0].picurl%>"></div>
-                      <a href="###"><%=news[0].title%></a>
-                  </div>
 
-                  <div class="right-s1">
-                      <%news.map(function(item,index,array){if(index!==0){%>
-                      <div class="right-s1-div">
-                          <div class="pic-rs"><img alt="<%=item.picname%>" src="<%=item.picurl%>"></div>
-                          <a href="###"><%=item.title%></a>
-                          <p><%=item.content%></p>
+      <section class="section-main">
+          <!-- 新闻框 -->
+          <div class="news-all">
+              <div class="news-title">
+                  <div class="dongtai"  id="dong"  onclick="turn()">最新动态 </div>
+                  <div class="xiangmu" id="xiang" onclick="turn1()">项&nbsp;&nbsp;&nbsp;&nbsp;目 </div>
+                  <div class="dongtai-show"  id="ds">
+                      <div class="left-s1">
+                          <div class="pic-ls"><img alt="<%=news[0].picname%>" src="<%=news[0].picurl%>"></div>
+                          <a href="###"><%=news[0].title%></a>
                       </div>
-                      <%}})%>
+
+                      <div class="right-s1">
+                          <%news.map(function(item,index,array){if(index!==0){%>
+                          <div class="right-s1-div">
+                              <div class="pic-rs"><img alt="<%=item.picname%>" src="<%=item.picurl%>"></div>
+                              <a href="###"><%=item.title%></a>
+                              <p><%=item.content%></p>
+                          </div>
+                          <%}})%>
+                      </div>
+                      <div class="more"><a href="/news">MORE&gt;&gt;</a></div>
                   </div>
-                  <div class="more"><a href="/news">MORE&gt;&gt;</a></div>
+                  <div class="xiangmu-show" id="xs">
+                      <div align="center" class="item">
+                          <table width="100%" border="0" cellpadding="0" cellspacing="1">
+                              <tr>
+                                  <td width="" height="" align="left"><h3>项目：hello小孩</h3></td>
+                              </tr>
+                              <tr>
+                                  <td width="10%" height="" align="left"><img style="height:100px; weight:80%;" src="/images/pic-4.jpg"></td>
+                                  <td width="70%" height="" align="left">
+                                      项目简介 | 帮助贫困地区和处在困境中的孩子的公益项目xgfb<br>
+                                      项目时间 | 2017-3-21至2019-3-21<br>
+                                      项目状态 | 发起中 %>
+                                  </td>
+                              </tr>
+                          </table>
+                          </p>
+                      </div>
+                      <div align="center" class="item">
+                          <table width="100%" border="0" cellpadding="0" cellspacing="1">
+                              <tr>
+                                  <td width="" height="" align="left"><h3>项目：hello小孩</h3></td>
+                              </tr>
+                              <tr>
+                                  <td width="10%" height="" align="left"><img style="height:100px; weight:80%;" src="/images/pic-4.jpg"></td>
+                                  <td width="70%" height="" align="left">
+                                      项目简介 | 帮助贫困地区和处在困境中的孩子的公益项目xgfb<br>
+                                      项目时间 | 2017-3-21至2019-3-21<br>
+                                      项目状态 | 发起中 %>
+                                  </td>
+                              </tr>
+                          </table>
+                          </p>
+                      </div>
+                      <div align="center" class="item">
+                          <table width="100%" border="0" cellpadding="0" cellspacing="1">
+                              <tr>
+                                  <td width="" height="" align="left"><h3>项目：hello小孩</h3></td>
+                              </tr>
+                              <tr>
+                                  <td width="10%" height="" align="left"><img style="height:100px; weight:80%;" src="/images/pic-4.jpg"></td>
+                                  <td width="70%" height="" align="left">
+                                      项目简介 | 帮助贫困地区和处在困境中的孩子的公益项目xgfb<br>
+                                      项目时间 | 2017-3-21至2019-3-21<br>
+                                      项目状态 | 发起中 %>
+                                  </td>
+                              </tr>
+                          </table>
+                          </p>
+                      </div>
+                      <div class="more"><a href="/project">MORE&gt;&gt;</a></div>
+                  </div>
+                  <div class="shipin-show" id="ss"></div>
               </div>
-              <div class="xiangmu-show" id="xs">
-                  <div align="center" class="item">
-                      <table width="100%" border="0" cellpadding="0" cellspacing="1">
-                          <tr>
-                              <td width="" height="" align="left"><h3>项目：hello小孩</h3></td>
-                          </tr>
-                          <tr>
-                              <td width="10%" height="" align="left"><img style="height:100px; weight:80%;" src="/images/pic-4.jpg"></td>
-                              <td width="70%" height="" align="left">
-                                  项目简介 | 帮助贫困地区和处在困境中的孩子的公益项目xgfb<br>
-                                  项目时间 | 2017-3-21至2019-3-21<br>
-                                  项目状态 | 发起中 %>
-                              </td>
-                          </tr>
-                      </table>
-                      </p>
-                  </div>
-                  <div align="center" class="item">
-                      <table width="100%" border="0" cellpadding="0" cellspacing="1">
-                          <tr>
-                              <td width="" height="" align="left"><h3>项目：hello小孩</h3></td>
-                          </tr>
-                          <tr>
-                              <td width="10%" height="" align="left"><img style="height:100px; weight:80%;" src="/images/pic-4.jpg"></td>
-                              <td width="70%" height="" align="left">
-                                  项目简介 | 帮助贫困地区和处在困境中的孩子的公益项目xgfb<br>
-                                  项目时间 | 2017-3-21至2019-3-21<br>
-                                  项目状态 | 发起中 %>
-                              </td>
-                          </tr>
-                      </table>
-                      </p>
-                  </div>
-                  <div align="center" class="item">
-                      <table width="100%" border="0" cellpadding="0" cellspacing="1">
-                          <tr>
-                              <td width="" height="" align="left"><h3>项目：hello小孩</h3></td>
-                          </tr>
-                          <tr>
-                              <td width="10%" height="" align="left"><img style="height:100px; weight:80%;" src="/images/pic-4.jpg"></td>
-                              <td width="70%" height="" align="left">
-                                  项目简介 | 帮助贫困地区和处在困境中的孩子的公益项目xgfb<br>
-                                  项目时间 | 2017-3-21至2019-3-21<br>
-                                  项目状态 | 发起中 %>
-                              </td>
-                          </tr>
-                      </table>
-                      </p>
-                  </div>
-                  <div class="more"><a href="/project">MORE&gt;&gt;</a></div>
-              </div>
-              <div class="shipin-show" id="ss"></div>
           </div>
-      </div>
-      <div class="message">
-          <div class="message-head">
-              <img class="s-biaoqian" alt="标签" src="/images/biaoqian2.png">
-          </div>
-          <div class="message-body">
-              <div class="news">
-                  <div class="news_title">
+          <!--右边-->
+          <aside>
+              <div class="message">
+                  <div class="message-head">
+                      <img class="s-biaoqian" alt="标签" src="/images/biaoqian2.png">
+                  </div>
+                  <div class="message-body">
+                      <div class="news">
+                          <div class="news_title">
                       <span class="span2">
                           <a href="#" target="_blank" title="更多">
                               <img src="/images/w_25_02.gif" width="50" height="37">
                           </a>
                       </span>
+                          </div>
+                          <div class="news_content">
+                              <% notice.map(function(item,index,array){ if(index%2==1){%>
+                              <p class="p01 p03"><a title="<%=item.title%>" href="#" target="_blank"><%=item.title%></a></p>
+                              <%}else{%>
+                              <p class="p01"><a title="<%=item.title%>" href="#" target="_blank"><%=item.title%></a></p>
+                              <%}})%>
+                          </div>
+                      </div>
+
                   </div>
-                  <div class="news_content">
-                      <% notice.map(function(item,index,array){ if(index%2==1){%>
-                      <p class="p01 p03"><a title="<%=item.title%>" href="#" target="_blank"><%=item.title%></a></p>
-                      <%}else{%>
-                      <p class="p01"><a title="<%=item.title%>" href="#" target="_blank"><%=item.title%></a></p>
-                      <%}})%>
+                  <!-- <div class="more"><a>MORE&gt;&gt;</a></div> -->
+              </div>
+              <!-- 友情链接 -->
+              <div class="link">
+                  <div class="link-head">
+                      <img class="s-biaoqian" alt="标签" src="/images/biaoqian1.png"></div>
+                  <div class="link-body">
+                      <div class="xglink"><a href="http://www.zgzyz.org.cn/" target="_blank"><img alt="中国青年志愿者" src="/images/link1.jpg"></a></div>
+                      <div class="xglink"><a href="http://srschina.org/" target="_blank"><img alt="上海根与芽" src="/images/link2.jpg"></a></div>
+                      <div class="xglink"><a href="http://weibo.com/u/1759486811?is_all=1" target="_blank"><img alt="中国大学生公益联盟" src="/images/link3.jpg"></a></div>
+                      <div class="xglink"><a href="http://www.yinghuo.org/portal.php" target="_blank"><img alt="萤火助学" src="/images/link4.jpg"></a></div>
+                      <div class="xglink"><a href="http://www.redcross.org.cn/hhzh/" target="_blank"><img alt="中国红红十字会" src="/images/link5.jpg"></a></div>
+                      <div class="xglink"><a href="http://cva.mca.gov.cn/" target="_blank"><img alt="中华志愿者协会" src="/images/link6.jpg"></a></div>
+
                   </div>
               </div>
+          </aside>
+      </section>
 
-          </div>
-          <!-- <div class="more"><a>MORE&gt;&gt;</a></div> -->
-      </div>
-      <!-- 友情链接 -->
-      <div class="link">
-          <div class="link-head">
-              <img class="s-biaoqian" alt="标签" src="/images/biaoqian1.png"></div>
-          <div class="link-body">
-              <div class="xglink"><a href="http://www.zgzyz.org.cn/" target="_blank"><img alt="中国青年志愿者" src="/images/link1.jpg"></a></div>
-              <div class="xglink"><a href="http://srschina.org/" target="_blank"><img alt="上海根与芽" src="/images/link2.jpg"></a></div>
-              <div class="xglink"><a href="http://weibo.com/u/1759486811?is_all=1" target="_blank"><img alt="中国大学生公益联盟" src="/images/link3.jpg"></a></div>
-              <div class="xglink"><a href="http://www.yinghuo.org/portal.php" target="_blank"><img alt="萤火助学" src="/images/link4.jpg"></a></div>
-              <div class="xglink"><a href="http://www.redcross.org.cn/hhzh/" target="_blank"><img alt="中国红红十字会" src="/images/link5.jpg"></a></div>
-              <div class="xglink"><a href="http://cva.mca.gov.cn/" target="_blank"><img alt="中华志愿者协会" src="/images/link6.jpg"></a></div>
-
-          </div>
-      </div>
       <!-- 页尾 -->
       <div class="yewei">
           <div class="wei">
@@ -170,6 +177,7 @@
               <div class="word-wei"><span>供需自助</span></div>
           </div>
       </div>
+
   </div>
 
   <div class="feet-bg">
@@ -181,7 +189,6 @@
       </div>
   </div>
 <script src="/javascripts/banner.js"></script>
-
 <script src="/javascripts/index.js"></script>
 </body>
 
